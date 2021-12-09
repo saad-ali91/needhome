@@ -501,7 +501,7 @@ nav .btn-secondary-color:hover {
     position: absolute;
     color: #2BCCAC;
     font-size: 37px;
-    z-index: 555;
+    z-index: 55;
     display: block;
     cursor: pointer;
 }
@@ -522,7 +522,7 @@ nav .btn-secondary-color:hover {
 .featured .fa-chevron-circle-left {
     left: -2.3%;
     top: 40%;
-    z-index: 555;
+    z-index: 55;
 }
 .featured .slick-track{
     margin-top: 40px;
@@ -707,6 +707,9 @@ nav .btn-secondary-color:hover {
     /* display: none; */
     margin-top: 10px;
 }
+#filter-form>h4{
+    margin-top: 0;
+}
 
 #filter-form h4,
 #filter-form label {
@@ -785,9 +788,9 @@ nav .btn-secondary-color:hover {
     background: #fafafa;
     margin-right: 0;
     margin-left: 0;
-    z-index: 5555;
-    top: 90px;
-    padding: 20px 5px!important;
+    z-index: 555;
+    top: 77px;
+    padding: 10px 5px!important;
 }
 #filter-form input::placeholder{
     font-size: 14px;
@@ -797,6 +800,7 @@ nav .btn-secondary-color:hover {
     box-shadow: none!important;
     padding-left: 0!important;
     padding-right: 0!important;
+    padding-bottom: 0!important;
 }
 
 .hero-section .row{
@@ -1500,6 +1504,8 @@ nav .btn-secondary-color:hover {
 }
 .form-width{
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .list-names{
