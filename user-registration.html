@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@200;400;500;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>needhome</title>
+</head>
+
+<body>
+  <div class="fixed sticky-top">
+    <div class="topbar">
+      <div class="container d-flex justify-content-between align-items-center py-1">
+        <div class="contact d-flex justify-content-between col-md-7">
+          <div class="phone d-flex align-items-center">
+            <i class="fa fa-phone" aria-hidden="true" class="me-1"></i>
+            <a href="tel:+923001000006">+92 300 1000006</a>
+          </div>
+          <div class="email d-flex align-items-center">
+            <i class="fa fa-envelope" aria-hidden="true" class="me-1"></i>
+            <a href="mailto:needhome@email.com">needhome@email.com</a>
+          </div>
+          <div class="location d-flex align-items-center">
+            <i class="fa fa-map-pin" aria-hidden="true" class="me-1"></i>
+            <p class="d-inline">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="topbar-btn offset-md-4 col-md-1">
+          <div class="dropdown">
+            <a class="btn dropdown-toggle py-1 px-3" type="button" id="dropdownMenu4" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Eng
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button">FR</button></li>
+              <li><button class="dropdown-item" type="button">FR</button></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="NeedHome">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <div class="navbar-nav w-75 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Cities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Agents</a>
+            </li>
+          </div>
+          <div class="d-flex w-25 justify-content-end">
+            <!-- <a type="button" class="btn btn-primary-color me-2">Login</a> -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Login
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="text-center">Welcome</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                          type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                          type="button" role="tab" aria-controls="profile" aria-selected="false">Sign Up</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-1">
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control" id="username" placeholder="Username...">
+                          </div>
+                          <div class="col-sm-12">
+                            <input type="password" class="form-control" id="password" placeholder="Password...">
+                          </div>
+                          <p><a href="#">Forgot Passowrd?</a></p>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary-color btn-login"
+                              id="form-1-search">Login</button>
+                          </div><br><br>
+                          <p class="text-center">-or-</p>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-fb" id="form-1-search"><i
+                                class="fa fa-facebook me-2"></i>Login with Facebook</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-twitter" id="form-1-search"><i
+                                class="fa fa-twitter me-2"></i>Login with Twitter</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-google" id="form-1-search"><i
+                                class="fa fa-google me-2"></i>Login with Google</a>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-2">
+                          <div class="col-sm-6">
+                            <label for="firstname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="lastname" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"
+                              placeholder="8 characters, 1number, 1 symbol">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="rePassword" class="form-label">Re-enter Password</label>
+                            <input type="password" class="form-control" id="rePassword" placeholder="">
+                          </div>
+                          <div class="col-sm-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email...">
+                          </div>
+                          <div class="col-sm-12 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I agree to the Terms of Use/Privacy
+                              Policy</label>
+                          </div>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-secondary-color btn-login" id="form-1-search">Sign
+                              Up</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="form-container">
+  <div class="row">
+    <p>Your Email has been verified: <span>needhome@gmail.com</span></p>
+    <p>Please enter your information <a href="#">exactly as registered with RECO,</a> otherwise you will not be able to register</p>
+    
+    <p>Needhome contains sesitive data such as commissions and incentives, and needs this information to idenify you as an agent</p>
+  </div>
+  <form action="">
+   <div class="break-point">
+      <div class="input-group">
+        <div class="input-group-text">Salutation*</div>
+        <select  class="form-select">
+          <option selected>Select...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">First Name*</div>
+        <input type="text" class="form-control">
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">Middle Name</div>
+        <input type="text" class="form-control">
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">Last Name*</div>
+        <input type="text" class="form-control">
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">Trade Name</div>
+        <input type="text" class="form-control" placeholder="If you operate with a trade name">
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">Cell Phone*</div>
+        <input type="text" class="form-control" >
+      </div>
+   </div>
+    <div class="break-point">
+      <div class="input-group">
+        <div class="input-group-text">Province*</div>
+        <select  class="form-select">
+          <option selected>Select...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">Association Reg #*</div>
+        <input type="text" class="form-control" placeholder="Ontario RECO #, British Columbia RECBX #, Alberta RECA # etc...">
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">Brokerage*</div>
+        <input type="text" class="form-control" placeholder="Search for your Brokerage">
+      </div>
+    </div>
+    <div class="break-point">
+      <div class="input-group">
+        <div class="input-group-text">Password*</div>
+        <input type="password" class="form-control" placeholder="Password must be atleast 8 characters, contain 1 number and 1 letter">
+      </div>
+      <div class="input-group">
+        <div class="input-group-text">Confirm Password*</div>
+        <input type="password" class="form-control">
+      </div>
+      <div class="row terms">
+        <div class="col-sm-12">
+          <p>Join the Agent Insider</p>
+          <p>Get Invitatios and alerts for new condo launches, promotions, deals and industry news</p>
+          <input class="form-check-input" type="checkbox" value="">&nbsp;&nbsp;&nbsp;<span>By Clicking 'Continue' I agree to Needhome's <a href="#">Agent's Terms of Use</a></span><br>
+          
+        </div>
+        <!-- <div class="col-sm-3">
+          <input class="form-check-input" type="checkbox" value="">
+        </div> -->
+      </div>
+    </div>
+    <div class="sub-btn">
+      <button type="submit" class="btn btn-primary-color">Continue</button>
+     <div>
+      <input class="form-check-input" type="checkbox"><label  class="form-label">Keep me Logged in</label>
+     </div>
+    </div>
+
+  </form>
+</div>
+
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Important Links</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">About us</a> </li>
+            <li> <a href="#">Careers</a> </li>
+            <li> <a href="#">Contact us</a> </li>
+            <li> <a href="#">Services</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Discover</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">Properties for sale</a> </li>
+            <li> <a href="#">Properties for rent</a> </li>
+            <li> <a href="#">Properties to buy</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Address</h2>
+          <p>Lorem ipsum dolor sit amet consectetur
+            adipiscing elit, nec tristique cubilia
+            class orci sociosqu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Address Bar -->
+  <div class="bottom-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-xs-12">
+          <p>All rights reserved &copy; needhome 2021</p>
+        </div>
+        <div class="col-sm-2 col-xs-12">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/magnific-popup.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1799 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@200;400;500;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>needhome</title>
+</head>
+
+<body>
+  <div class="fixed sticky-top">
+    <div class="topbar">
+      <div class="container d-flex justify-content-between align-items-center py-1">
+        <div class="contact d-flex justify-content-between col-md-7">
+          <div class="phone d-flex align-items-center">
+            <i class="fa fa-phone" aria-hidden="true" class="me-1"></i>
+            <a href="tel:+923001000006">+92 300 1000006</a>
+          </div>
+          <div class="email d-flex align-items-center">
+            <i class="fa fa-envelope" aria-hidden="true" class="me-1"></i>
+            <a href="mailto:needhome@email.com">needhome@email.com</a>
+          </div>
+          <div class="location d-flex align-items-center">
+            <i class="fa fa-map-pin" aria-hidden="true" class="me-1"></i>
+            <p class="d-inline">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="topbar-btn offset-md-4 col-md-1">
+          <div class="dropdown">
+            <a class="btn dropdown-toggle py-1 px-3" type="button" id="dropdownMenu4" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Eng
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button">FR</button></li>
+              <li><button class="dropdown-item" type="button">FR</button></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="NeedHome">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <div class="navbar-nav w-75 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Cities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Agents</a>
+            </li>
+          </div>
+          <div class="d-flex w-25 justify-content-end">
+            <!-- <a type="button" class="btn btn-primary-color me-2">Login</a> -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Login
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="text-center">Welcome</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                          type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                          type="button" role="tab" aria-controls="profile" aria-selected="false">Sign Up</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-1">
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control" id="username" placeholder="Username...">
+                          </div>
+                          <div class="col-sm-12">
+                            <input type="password" class="form-control" id="password" placeholder="Password...">
+                          </div>
+                          <p><a href="#">Forgot Passowrd?</a></p>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary-color btn-login"
+                              id="form-1-search">Login</button>
+                          </div><br><br>
+                          <p class="text-center">-or-</p>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-fb" id="form-1-search"><i
+                                class="fa fa-facebook me-2"></i>Login with Facebook</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-twitter" id="form-1-search"><i
+                                class="fa fa-twitter me-2"></i>Login with Twitter</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-google" id="form-1-search"><i
+                                class="fa fa-google me-2"></i>Login with Google</a>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-2">
+                          <div class="col-sm-6">
+                            <label for="firstname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="lastname" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"
+                              placeholder="8 characters, 1number, 1 symbol">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="rePassword" class="form-label">Re-enter Password</label>
+                            <input type="password" class="form-control" id="rePassword" placeholder="">
+                          </div>
+                          <div class="col-sm-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email...">
+                          </div>
+                          <div class="col-sm-12 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I agree to the Terms of Use/Privacy
+                              Policy</label>
+                          </div>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-secondary-color btn-login" id="form-1-search">Sign
+                              Up</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+<!-- Toggle Button with Map and Listing -->
+<div class="toggle-btn-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 offset-md-9 col-sm-12">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+          <label class="form-check-label" for="flexRadioDefault1">
+           List View
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+          <label class="form-check-label" for="flexRadioDefault2">
+            Map View
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- listing Div -->
+<div class="listing">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="search-filter">
+          <h4>Filter By</h4>
+            <div class="form-div">
+               <form action="" id="formListing">
+                 <div>
+                  <input type="text" class="form-control" placeholder="Search...">
+                 </div>
+                 <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        City
+                        
+                      </button>
+                      
+                      <!-- City shown after Selected -->
+                      <p class="form-control list-names" id="cityList"></p>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" id="listingCity" placeholder="Enter City...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="city" id="exampleRadios1" value="Any">
+                              <label class="form-check-label" for="exampleRadios1" >
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="city" id="exampleRadios1" value="Torronto">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Torronto
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="city" id="exampleRadios1" value="Vaughan">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Vaughan
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Neighbourhood
+                      </button>
+                      <p class="form-control list-names" id="neighbourhood"></p>
+                      <!-- Neighbourhood shown after Selected -->
+                      
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Neighbourhood...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="neighbourhood" id="exampleRadios1" value="Any">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="neighbourhood" id="exampleRadios1" value="401 Business Park">
+                              <label class="form-check-label" for="exampleRadios1">
+                                401 Business Park
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="neighbourhood" id="exampleRadios1" value="Adjala-Tosorontio">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Adjala-Tosorontio
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Sales Status
+                      </button>
+                      <p class="form-control list-names" id="sale"></p>
+                       <!--  Sales Status shown after Selected -->
+                       
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Sales Status...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="sale" id="exampleRadios1" value="Any">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="sale" id="exampleRadios1" value="VIP Sales">
+                              <label class="form-check-label" for="exampleRadios1">
+                                VIP Sales
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="sale" id="exampleRadios1" value="Public Sales">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Public Sales
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Construction Status
+                      </button>
+                      <p class="form-control list-names" id="construction"></p>
+                      <!--  Construction Status shown after Selected -->
+                     
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Construction Status...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Any" name="construction" id="flexCheckDefault">
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Construction Complete" name="construction" id="flexCheckDefault">
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Construction Complete
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Pre-Construction" name="construction" id="flexCheckDefault">
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Pre-Construction
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Pre-Construction" name="construction" id="flexCheckDefault">
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Under Construction
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Occupancy Date
+                      </button>
+                      <p class="form-control list-names" id="occupancy"></p>
+                      <!--  Occupancy Date shown after Selected -->
+                      
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Occupancy Date...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="occupancy" id="exampleRadios1" value="Immediate">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Immediate
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="occupancy" id="exampleRadios1" value="30 Days">
+                              <label class="form-check-label" for="exampleRadios1">
+                                30 Days
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="occupancy" id="exampleRadios1" value="90 Days">
+                              <label class="form-check-label" for="exampleRadios1">
+                                90 Days
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        Condo Amenities
+                      </button>
+                      <p class="form-control list-names" id="condoamenities"></p>
+                       <!--   Condo Amenities shown after Selected -->
+                       
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Condo Amenities...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="condoamenities" id="exampleRadios1" value="Fitness">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Fitness
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="condoamenities" id="exampleRadios1" value="Party Room">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Party Room
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="condoamenities" id="exampleRadios1" value="Terrace">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Terrace
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        Product Type
+                      </button>
+                      <p class="form-control list-names" id="product"></p>
+                      <!--  Product Type shown after Selected -->
+                      
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Product Type...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="product" id="exampleRadios1" value="Condo">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Condo
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="product" id="exampleRadios1" value="Condo Townhome">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Condo Townhome
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="product" id="exampleRadios1" value="Loft">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Loft
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Empty Div for height -->
+                  <div class="empty-div"></div>
+                  <!-- Empty Div for height -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header price-list" id="flush-headingEight">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        Price Range
+                      </button>
+                      <div class="javascr">
+                        <span class="price-doll-1 dollar">$</span><p class="price-names" id="pricerange"></p> <p id="price_too"></p><span class="price-doll-2 dollar">$</span><p id="priceto"></p>
+                      </div>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromRange" class="form-label">
+                            From
+                          </label>
+                          <input type="text" class="form-control" name="list-from" id="price-from" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toRange" class="form-label">
+                              To
+                            </label>
+                            <input type="text" class="form-control" name="list-to" id="price-to" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                       Price /sq ft
+                      </button>
+                      <div class="javascr">
+                        <span class="psqft-doll-1 dollar">$</span><p class="price-names" id="psqft"></p> <p id="psqft_too"></p><span class="psqft-doll-2 dollar">$</span><p id="psqftto"></p>
+                      </div>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromSqft" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="p-sqft-from" name="p-sqft-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toSqft" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="p-sqft-to" name="p-sqft-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                       Bedroom
+                      </button>
+                      <div class="javascr">
+                        <p class="price-names" id="bed"></p><span class="bed-doll-1 dollar">bed&nbsp;</span> <p id="bed_too"></p><p id="bedto"></p><span class="bed-doll-2 dollar">beds</span>
+                      </div>
+                    </h2>
+                    <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromBed" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="bed-from" name="bed-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toBed" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="bed-to" name="bed-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingEleven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                       Bathrooms
+                      </button>
+                      <div class="javascr">
+                        <p class="price-names" id="bath"></p> <span class="bath-doll-1 dollar">bath &nbsp;</span><p id="bath_too"></p><p id="bathto"></p><span class="bath-doll-2 dollar">baths</span>
+                      </div>
+                    </h2>
+                    <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromBath" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="bath-from" name="bath-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toBath" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="bath-to" name="bath-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwelve">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                       Size (sq ft)
+                      </button>
+                      <div class="javascr">
+                        <p class="price-names" id="sizesq"></p><span class="sizesq-doll-1 dollar">sq ft &nbsp;</span> <p id="sizesq_too"></p><p id="sizesqto"></p><span class="sizesq-doll-2 dollar">sq ft</span>
+                      </div>
+                    </h2>
+                    <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromSizesqft" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="sizesq-from" name="sizesq-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toSizesqft" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="sizesq-to" name="sizesq-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThirteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseThirteen">
+                        Promotion
+                      </button>
+                      <p class="form-control list-names" id="promotion"></p>
+                    </h2>
+                    <div id="flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="promotion" id="exampleRadios1" value="Yes">
+                              <label class="form-check-label" for="exampleRadios1">
+                               Yes
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="promotion" id="exampleRadios1" value="No">
+                              <label class="form-check-label" for="exampleRadios1">
+                                No
+                              </label>
+                            </div>
+                          </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Empty Div for height -->
+                  <div class="empty-div"></div>
+                  <!-- Empty Div for height -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFourteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false" aria-controls="flush-collapseFourteen">
+                       Deposit %
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromDeposit" class="form-label">
+                            From
+                          </label>
+                          <input type="text" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toDeposit" class="form-label">
+                              To
+                            </label>
+                            <input type="text" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFifteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifteen" aria-expanded="false" aria-controls="flush-collapseFifteen">
+                        Walk Score
+                      </button>
+                      <p class="form-control list-names" id="walk"></p>
+                      <!-- Walk Score shown after Selected -->
+                      
+                    </h2>
+                    <div id="flush-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFifteen" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter  Walk Score...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="walk" id="exampleRadios1" value=" Walker’s Paradise (90-100)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Walker’s Paradise (90-100)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="walk" id="exampleRadios1" value="Very Walkable (70-89)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Very Walkable (70-89)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="walk" id="exampleRadios1" value="Somewhat Walkable (50-69)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Somewhat Walkable (50-69)
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSixteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixteen" aria-expanded="false" aria-controls="flush-collapseSixteen">
+                        Transit Score
+                      </button>
+                      <p class="form-control list-names" id="transit"></p>
+                      <!-- Transit Score shown after Selected -->
+                      <p class="text-danger"> Transit Score</p>
+                    </h2>
+                    <div id="flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter  Transit Score...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="transit" id="exampleRadios1" value="Rider’s Paradise (90-100)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Rider’s Paradise (90-100)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="transit" id="exampleRadios1" value="Excellent Transit (70-89)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Excellent Transit (70-89)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="transit" id="exampleRadios1" value="Good Transit (50-69)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Good Transit (50-69)
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="reset" value="Reset" class="btn reset text-light">
+               </form>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <div class="search-result">
+          <div class="row mb-3">
+            <p>Showing <span>6</span> results of <span>12</span></p>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+              <a href="#" class="link d-block">
+                <div class="card h-100">
+                  <img src="images/featured.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <span class="w-100 rent">Rent</span>
+                    <h5 class="card-title">Manhattan View</h5>
+                    <div class="price">$8000</div>
+                    <div class="my-3 px-3 information d-flex justify-content-between">
+                      <div><img src="images/bed.png" alt=""> 3</div>
+                      <div><img src="images/shower.png" alt=""> 2</div>
+                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                    </div>
+                  </div>
+    
+                  <div class="card-footer px-4">
+                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                      sit amet consectetur </small>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- NEw Listing Div With Maps-->
+<div class="listing-map">
+  <div class="container-fluid">
+    <div class="row list-map-cont">
+      <div class="col-md-2 col-sm-12 scroll-class">
+        <div class="search-filter">
+          <div class="filter-div">
+            <div><h4 >Filter By</h4> </div>
+            <div><i class="fa fa-filter" aria-hidden="true"></i></div>
+          </div>
+            <div class="form-div">
+               <form action="">
+                 <div>
+                  <input type="text" class="form-control" placeholder="Search...">
+                 </div>
+                 <div class="accordion accordion-flush" id="accordionFlushExample-2">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseOne" aria-expanded="false" aria-controls="map-flush-collapseOne">
+                        City
+                      </button>
+                      <p class="form-control list-names" id="mapCityList"></p>
+                      <!-- City shown after Selected -->
+                      
+                    </h2>
+                    <div id="map-flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter City ...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="mapCityList"  value="Any" >
+                              <label class="form-check-label" >
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="mapCityList"  value="Torronto">
+                              <label class="form-check-label" >
+                                Torronto
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="mapCityList"  value="Vaughan">
+                              <label class="form-check-label" >
+                                Vaughan
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseTwo" aria-expanded="false" aria-controls="map-flush-collapseTwo">
+                        Neighbourhood
+                      </button>
+                      <p class="form-control list-names" id="map-neighbourhood"></p>
+                      <!-- Neighbourhood shown after Selected -->
+                     
+                    </h2>
+                    <div id="map-flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Neighbourhood...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-neighbourhood" id="exampleRadios1" value="Any">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-neighbourhood" id="exampleRadios1" value="401 Business Park">
+                              <label class="form-check-label" for="exampleRadios1">
+                                401 Business Park
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-neighbourhood" id="exampleRadios1" value="Adjala-Tosorontio">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Adjala-Tosorontio
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseThree" aria-expanded="false" aria-controls="map-flush-collapseThree">
+                        Sales Status
+                      </button>
+                      <p class="form-control list-names" id="map-sale"></p>
+                      <!--  Sales Status shown after Selected -->
+                      
+                    </h2>
+                    <div id="map-flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Sales Status...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-sale" id="exampleRadios1" value="Any">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-sale" id="exampleRadios1" value="VIP Sales">
+                              <label class="form-check-label" for="exampleRadios1">
+                                VIP Sales
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-sale" id="exampleRadios1" value="Public Sales">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Public Sales
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFour" aria-expanded="false" aria-controls="map-flush-collapseFour">
+                        Construction Status
+                      </button>
+                      <p class="form-control list-names" id="map-construction"></p>
+                      <!--  Construction Status shown after Selected -->
+                      
+                    </h2>
+                    <div id="map-flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Construction Status...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-construction" id="exampleRadios1" value="Any">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Any
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-construction" id="exampleRadios1" value="Construction Complete">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Construction Complete
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-construction" id="exampleRadios1" value="Pre-Construction">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Pre-Construction
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFive" aria-expanded="false" aria-controls="map-flush-collapseFive">
+                        Occupancy Date
+                      </button>
+                      <p class="form-control list-names" id="map-occupancy"></p>
+                      <!--  Occupancy Date shown after Selected -->
+                     
+                    </h2>
+                    <div id="map-flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Occupancy Date...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-occupancy" id="exampleRadios1" value="Immediate">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Immediate
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-occupancy" id="exampleRadios1" value="30 Days">
+                              <label class="form-check-label" for="exampleRadios1">
+                                30 Days
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-occupancy" id="exampleRadios1" value="90 Days">
+                              <label class="form-check-label" for="exampleRadios1">
+                                90 Days
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseSix" aria-expanded="false" aria-controls="map-flush-collapseSix">
+                        Condo Amenities
+                      </button>
+                      <p class="form-control list-names" id="map-condoamenities"></p>
+                      <!--   Condo Amenities shown after Selected -->
+                      
+                    </h2>
+                    <div id="map-flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Condo Amenities...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-condoamenities" id="exampleRadios1" value="Fitness">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Fitness
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-condoamenities" id="exampleRadios1" value="Party Room">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Party Room
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-condoamenities" id="exampleRadios1" value="Terrace">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Terrace
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseSeven" aria-expanded="false" aria-controls="map-flush-collapseSeven">
+                        Product Type
+                      </button>
+                      <p class="form-control list-names" id="map-product"></p>
+                      <!--  Product Type shown after Selected -->
+                     
+                    </h2>
+                    <div id="map-flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Product Type...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-product" id="exampleRadios1" value="Condo">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Condo
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-product" id="exampleRadios1" value="Condo Townhome">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Condo Townhome
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="map-product" id="exampleRadios1" value="Loft">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Loft
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Empty Div for height -->
+                  <div class="empty-div"></div>
+                  <!-- Empty Div for height -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingEight">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseEight" aria-expanded="false" aria-controls="map-flush-collapseEight">
+                        Price Range
+                        
+                      </button>
+                      <div class="javascr">
+                          <span class="map-price-doll-1 dollar">$</span><p class="map-price-names" id="map-pricerange"></p> <p id="map-price_too"></p><span class="map-price-doll-2 dollar">$</span><p id="map-priceto"></p>
+                        </div>
+                    </h2>
+                    <div id="map-flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromRange" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="map-price-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toRange" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="map-price-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseNine" aria-expanded="false" aria-controls="map-flush-collapseNine">
+                       Price /sq ft
+                      </button>
+                      <div class="javascr">
+                        <span class="map-psqft-doll-1 dollar">$</span><p class="price-names" id="map-psqft"></p> <p id="map-psqft_too"></p><span class="map-psqft-doll-2 dollar">$</span><p id="map-psqftto"></p>
+                      </div>
+                    </h2>
+                    <div id="map-flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromSqft" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="map-p-sqft-from" name="map-p-sqft-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toSqft" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="map-p-sqft-to" name="map-p-sqft-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseTen" aria-expanded="false" aria-controls="map-flush-collapseTen">
+                       Bedroom
+                      </button>
+                      <div class="javascr">
+                       <p class="price-names" id="map-bed"></p> <span class="map-bed-doll-1 dollar">bed&nbsp;</span> <p id="map-bed_too"></p><p id="map-bedto"></p><span class="map-bed-doll-2 dollar">beds</span>
+                      </div>
+                    </h2>
+                    <div id="map-flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromBed" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="map-bed-from" name="map-bed-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toBed" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="map-bed-to" name="map-bed-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingEleven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseEleven" aria-expanded="false" aria-controls="map-flush-collapseEleven">
+                       Bathrooms
+                      </button>
+                      <div class="javascr">
+                        <p class="price-names" id="map-bath"></p><span class="map-bath-doll-1 dollar">bath &nbsp;</span> <p id="map-bath_too"></p><p id="map-bathto"></p><span class="map-bath-doll-2 dollar">baths</span>
+                      </div>
+                    </h2>
+                    <div id="map-flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromBath" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="map-bath-from" name="map-bath-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toBath" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="map-bath-to" name="map-bath-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwelve">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseTwelve" aria-expanded="false" aria-controls="map-flush-collapseTwelve">
+                       Size (sq ft)
+                      </button>
+                      <div class="javascr">
+                        <p class="price-names" id="map-sizesq"></p><span class="map-sizesq-doll-1 dollar">sq ft &nbsp;</span> <p id="map-sizesq_too"></p><p id="map-sizesqto"></p><span class="map-sizesq-doll-2 dollar">sq ft</span>
+                      </div>
+                    </h2>
+                    <div id="map-flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromSizesqft" class="form-label">
+                            From
+                          </label>
+                          <input type="text" id="map-sizesq-from" name="map-sizesq-from" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toSizesqft" class="form-label">
+                              To
+                            </label>
+                            <input type="text" id="map-sizesq-to" name="map-sizesq-to" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThirteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseThirteen" aria-expanded="false" aria-controls="map-flush-collapseThirteen">
+                        Promotion
+                      </button>
+                      <p class="form-control list-names" id="map-promotion"></p>
+                    </h2>
+                    <div id="map-flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-promotion" id="exampleRadios1" value="Yes">
+                              <label class="form-check-label" for="exampleRadios1">
+                               Yes
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-promotion" id="exampleRadios1" value="No">
+                              <label class="form-check-label" for="exampleRadios1">
+                                No
+                              </label>
+                            </div>
+                          </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Empty Div for height -->
+                  <div class="empty-div"></div>
+                  <!-- Empty Div for height -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFourteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFourteen" aria-expanded="false" aria-controls="map-flush-collapseFourteen">
+                       Deposit %
+                      </button>
+                    </h2>
+                    <div id="map-flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <div>
+                          <label for="fromDeposit" class="form-label">
+                            From
+                          </label>
+                          <input type="text" class="form-control" placeholder="From...">
+                        </div>
+                        <div class="accordion-body">
+                          <div>
+                            <label for="toDeposit" class="form-label">
+                              To
+                            </label>
+                            <input type="text" class="form-control" placeholder="To...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFifteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFifteen" aria-expanded="false" aria-controls="map-flush-collapseFifteen">
+                        Walk Score
+                      </button>
+                      <p class="form-control list-names" id="map-walk"></p>
+                      <!-- Walk Score shown after Selected -->
+                      
+                    </h2>
+                    <div id="map-flush-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFifteen" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter Walk Score...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-walk" id="exampleRadios1" value="Walker’s Paradise (90-100)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Walker’s Paradise (90-100)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-walk" id="exampleRadios1" value="Very Walkable (70-89)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Very Walkable (70-89)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-walk" id="exampleRadios1" value="Somewhat Walkable (50-69)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Somewhat Walkable (50-69)
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSixteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseSixteen" aria-expanded="false" aria-controls="map-flush-collapseSixteen">
+                        Transit Score
+                      </button>
+                      <p class="form-control list-names" id="map-transit"></p>
+                      <!-- Transit Score shown after Selected -->
+                      
+                    </h2>
+                    <div id="map-flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen" data-bs-parent="#accordionFlushExample-2">
+                      <div class="accordion-body">
+                        <input type="text" class="form-control city-input" placeholder="Enter  Transit Score...">
+                        <ul class="list-filter">
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-transit" id="exampleRadios1" value="Rider’s Paradise (90-100)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Rider’s Paradise (90-100)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-transit" id="exampleRadios1" value="Excellent Transit (70-89)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Excellent Transit (70-89)
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="map-transit" id="exampleRadios1" value="Good Transit (50-69)">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Good Transit (50-69)
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="reset" value="Reset" class="btn  reset text-light">
+                </div>
+                
+               </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8645.267711451464!2d-79.42396375502749!3d43.689514896376224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1636556494174!5m2!1sen!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="col-md-4 overflow-scroll">
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row g-0 list-card">
+          <a href="">
+            <div class="col-md-4">
+              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Manhattan View</h5>
+                <p class="card-text">$ 30,000</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Important Links</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">About us</a> </li>
+            <li> <a href="#">Careers</a> </li>
+            <li> <a href="#">Contact us</a> </li>
+            <li> <a href="#">Services</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Discover</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">Properties for sale</a> </li>
+            <li> <a href="#">Properties for rent</a> </li>
+            <li> <a href="#">Properties to buy</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Address</h2>
+          <p>Lorem ipsum dolor sit amet consectetur
+            adipiscing elit, nec tristique cubilia
+            class orci sociosqu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Address Bar -->
+  <div class="bottom-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-xs-12">
+          <p>All rights reserved &copy; needhome 2021</p>
+        </div>
+        <div class="col-sm-2 col-xs-12">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/magnific-popup.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

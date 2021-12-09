@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@200;400;500;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>needhome</title>
+</head>
+
+<body>
+  <div class="fixed sticky-top">
+    <div class="topbar">
+      <div class="container d-flex justify-content-between align-items-center py-1">
+        <div class="contact d-flex justify-content-between col-md-7">
+          <div class="phone d-flex align-items-center">
+            <i class="fa fa-phone" aria-hidden="true" class="me-1"></i>
+            <a href="tel:+923001000006">+92 300 1000006</a>
+          </div>
+          <div class="email d-flex align-items-center">
+            <i class="fa fa-envelope" aria-hidden="true" class="me-1"></i>
+            <a href="mailto:needhome@email.com">needhome@email.com</a>
+          </div>
+          <div class="location d-flex align-items-center">
+            <i class="fa fa-map-pin" aria-hidden="true" class="me-1"></i>
+            <p class="d-inline">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="topbar-btn offset-md-4 col-md-1">
+          <div class="dropdown">
+            <a class="btn dropdown-toggle py-1 px-3" type="button" id="dropdownMenu4" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Eng
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button">FR</button></li>
+              <li><button class="dropdown-item" type="button">FR</button></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="NeedHome">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <div class="navbar-nav w-75 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Cities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Agents</a>
+            </li>
+          </div>
+          <div class="d-flex w-25 justify-content-end">
+            <!-- <a type="button" class="btn btn-primary-color me-2">Login</a> -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Login
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="text-center">Welcome</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                          type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                          type="button" role="tab" aria-controls="profile" aria-selected="false">Sign Up</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-1">
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control" id="username" placeholder="Username...">
+                          </div>
+                          <div class="col-sm-12">
+                            <input type="password" class="form-control" id="password" placeholder="Password...">
+                          </div>
+                          <p><a href="#">Forgot Passowrd?</a></p>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary-color btn-login"
+                              id="form-1-search">Login</button>
+                          </div><br><br>
+                          <p class="text-center">-or-</p>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-fb" id="form-1-search"><i
+                                class="fa fa-facebook me-2"></i>Login with Facebook</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-twitter" id="form-1-search"><i
+                                class="fa fa-twitter me-2"></i>Login with Twitter</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-google" id="form-1-search"><i
+                                class="fa fa-google me-2"></i>Login with Google</a>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-2">
+                          <div class="col-sm-6">
+                            <label for="firstname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="lastname" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"
+                              placeholder="8 characters, 1number, 1 symbol">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="rePassword" class="form-label">Re-enter Password</label>
+                            <input type="password" class="form-control" id="rePassword" placeholder="">
+                          </div>
+                          <div class="col-sm-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email...">
+                          </div>
+                          <div class="col-sm-12 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I agree to the Terms of Use/Privacy
+                              Policy</label>
+                          </div>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-secondary-color btn-login" id="form-1-search">Sign
+                              Up</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="property-reg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>Add a New Construction Listing - Free</h3>
+        <p>Primary Info</p>
+        <hr>
+        <form action="">
+          <!-- Development Name -->
+          <div class="input-group">
+            <div class="input-group-text">Development Name</div>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Developers -->
+          <div class="developer">
+            <div class="input-group">
+              <div class="input-group-text">Developer(s)</div>
+              <input type="text" class="form-control" id="developer-btn" placeholder="Enter Developers Name">
+              <div class="btn btn-primary-color developer-btn" >Add</div>
+            </div>
+            <ul class="developer-li"></ul>
+          </div>
+          <!-- Address -->
+          <div class="input-group">
+            <div class="input-group-text">Address*</div>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Building Type(s) -->
+          <div class="input-group">
+            <div class="input-group-text">Building Type(s)*</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" >
+              <label class="form-check-label" >
+                Condo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" >
+              <label class="form-check-label" >
+                House
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" >
+              <label class="form-check-label" >
+                Townhouse
+              </label>
+            </div>
+          </div>
+          <!-- Ownership Type(s) -->
+          <div class="input-group">
+            <div class="input-group-text">Ownership Type(s)*</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" >
+              <label class="form-check-label" >
+                Condominium
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" >
+              <label class="form-check-label" >
+                Co-op
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" >
+              <label class="form-check-label" >
+                Condop
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" >
+              <label class="form-check-label" >
+                Freehold
+              </label>
+            </div>
+          </div>
+          <!-- Community -->
+          <div class="input-group">
+            <div class="input-group-text">Community</div>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Selling Status -->
+          <div class="input-group">
+            <div class="input-group-text">Selling Status</div>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Selling Status</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <!-- Sales Start -->
+          <div class="input-group">
+            <div class="input-group-text">Sales Start</div>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Select</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Season/Month</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <!-- Average Common -->
+          <div class="input-group">
+            <div class="input-group-text">Average Common/Maintenance $</div>
+            <input type="text" class="form-control"> <span>per Sq Ft per Month</span>
+          </div>
+          <!-- Payment Structure -->
+          <div class="input-group">
+            <div class="input-group-text">Payment Structure</div>
+            <textarea class="form-control"  rows="5"></textarea>
+          </div>
+          <!-- Cost to Purchase -->
+          <div class="input-group">
+            <div class="input-group-text">Cost to Purchase Parking Spots  $</div>
+            <input type="text" class="form-control"> <span>to Purchase</span>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" > 
+              <label class="form-check-label" >
+                Parking is included in Purchase Price
+              </label>
+            </div>
+          </div>
+          <!-- Cost to Purchase Storage -->
+          <div class="input-group">
+            <div class="input-group-text">Cost to Purchase  $</div>
+            <input type="text" class="form-control"><span>to Purchase</span>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" > 
+              <label class="form-check-label" >
+                Parking is included in Purchase Price
+              </label>
+            </div>
+          </div>
+          <!-- Commission % for Realtors -->
+          <div class="input-group">
+            <div class="input-group-text">Commission % for Realtors</div>
+            <input type="text" class="form-control"> <span>%</span>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" > 
+              <label class="form-check-label" >
+                Will not cooperate with brokers
+              </label>
+            </div>
+          </div>
+
+          <h4>Project Details</h4>
+          <hr>
+          <!-- Construction Status -->
+          <div class="input-group">
+            <div class="input-group-text">Construction Status*</div>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Select Status</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <!-- Construction Start Date -->
+          <div class="input-group">
+            <div class="input-group-text">Construction Start Date</div>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Select Year</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Season/Month</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <!-- Total Units -->
+          <div class="input-group">
+            <div class="input-group-text">Total Number of Units</div>
+            <input type="text" class="form-control"> 
+          </div>
+          <!-- Number of Stories -->
+          <div class="input-group">
+            <div class="input-group-text">Number of Stories</div>
+            <input type="text" class="form-control"> 
+          </div>
+          <!-- Celing Heights -->
+          <div class="input-group">
+            <div class="input-group-text">Celing Heights in Ft</div>
+            <span>From</span><input type="text" class="form-control"> <span>to</span> <input type="text" class="form-control"> <span>Ft</span>
+          </div>
+          <!-- Sales Company -->
+          <div class="sales-company">
+            <div class="input-group">
+              <div class="input-group-text">Sales Company</div>
+              <input type="text" class="form-control" id="sales-com"> 
+            </div>
+            <ul class="sales-com"></ul>
+          </div>
+          <!-- Marketing Company -->
+          <div class="input-group">
+            <div class="input-group-text">Marketing Company</div>
+            <input type="text" class="form-control"> 
+          </div>
+          <!-- Architects -->
+          <div class="architects">
+            <div class="input-group">
+              <div class="input-group-text">Architects</div>
+              <input type="text" class="form-control" id="archi"> 
+            </div>
+            <ul class="archi"></ul>
+          </div>
+          <!-- Interior Designer -->
+          <div class="interior-designer">
+            <div class="input-group">
+              <div class="input-group-text">Interior Designer</div>
+              <input type="text" class="form-control" id="interior"> 
+            </div>
+            <ul class="interior"></ul>
+          </div>
+          <!-- Project Summary -->
+          <div class="input-group">
+            <div class="input-group-text">Project Summary</div>
+            <textarea class="form-control"  rows="5"></textarea>
+          </div>
+          <!-- Project Amenities -->
+          <div>
+          <div class="input-group">
+            <div class="input-group-text">Amenities</div>
+            <input type="text" class="form-control" id="p-amenities"> 
+            <div class="btn btn-primary-color w-25 p-amenities">Add</div>
+          </div>
+          <ul class="p-amenities-li"></ul>
+          </div>
+          <!-- Features & Finishes -->
+          <div class="input-group">
+            <div class="input-group-text">Features & Finishes</div>
+            <textarea class="form-control"  rows="5"></textarea>
+          </div>
+          <!-- Current Incentives -->
+          <div class="input-group">
+            <div class="input-group-text">Current Incentives</div>
+            <textarea class="form-control"  rows="5"></textarea>
+          </div>
+
+
+          <h4>Contact</h4>
+          <hr>
+          <!-- Contact -->
+          <div class="input-group">
+            <div class="input-group-text">Primary Contact/Admin</div>
+            <input type="text" class="form-control" placeholder="Enter Email or Name of the user">
+          </div>
+          <!-- Project Website -->
+          <div class="input-group">
+            <div class="input-group-text">Project Website</div>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Virtual Tours URL -->
+          <div class="input-group">
+            <div class="input-group-text">Virtual Tours URL</div>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Matterport 3D Walkthrough -->
+          <div class="input-group">
+            <div class="input-group-text">Matterport 3D Walkthrough</div>
+            <input type="text" class="form-control" placeholder="Ex. https://my.matterport.com/show/?m=RNHyfbVmFiX?">
+          </div>
+          <!-- Facebook -->
+          <div class="input-group">
+            <div class="input-group-text">Facebook</div>
+            <input type="text" class="form-control" placeholder="Enter URL">
+          </div>
+          <!-- Twitter -->
+          <div class="input-group">
+            <div class="input-group-text">Twitter</div>
+            <input type="text" class="form-control" placeholder="Enter URL">
+          </div>
+          <!-- Instagram -->
+          <div class="input-group">
+            <div class="input-group-text">Twitter</div>
+            <input type="text" class="form-control" placeholder="Enter URL">
+          </div>
+          <!-- Sales Centre Phone Number -->
+          <div class="input-group">
+            <div class="input-group-text">Sales Centre Phone Number</div>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Sales Centre Address -->
+          <div class="input-group">
+            <div class="input-group-text">Sales Centre Address</div>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Sales Centre Hours -->
+          <div class="input-group">
+            <div class="input-group-text">Sales Centre Hours</div>
+            <textarea class="form-control"  rows="5"></textarea>
+          </div>
+
+          <div class="btns">
+            <button class="btn btn-secondary me-2">Cancel</button>
+            <button class="btn btn-primary-color">Save Changes</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <div class="reg-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5762.274556744646!2d-79.58341481584507!3d43.77000911661772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1636129860899!5m2!1sen!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <div class="btn btn-primary-color">Adjust Location on Map</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Important Links</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">About us</a> </li>
+            <li> <a href="#">Careers</a> </li>
+            <li> <a href="#">Contact us</a> </li>
+            <li> <a href="#">Services</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Discover</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">Properties for sale</a> </li>
+            <li> <a href="#">Properties for rent</a> </li>
+            <li> <a href="#">Properties to buy</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Address</h2>
+          <p>Lorem ipsum dolor sit amet consectetur
+            adipiscing elit, nec tristique cubilia
+            class orci sociosqu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Address Bar -->
+  <div class="bottom-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-xs-12">
+          <p>All rights reserved &copy; needhome 2021</p>
+        </div>
+        <div class="col-sm-2 col-xs-12">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/magnific-popup.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

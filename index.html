@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@200;400;500;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>needhome</title>
+</head>
+
+<body>
+  <div class="fixed sticky-top">
+    <div class="topbar">
+      <div class="container d-flex justify-content-between align-items-center py-1">
+        <div class="contact d-flex justify-content-between col-md-7">
+          <div class="phone d-flex align-items-center">
+            <i class="fa fa-phone" aria-hidden="true" class="me-1"></i>
+            <a href="tel:+923001000006">+92 300 1000006</a>
+          </div>
+          <div class="email d-flex align-items-center">
+            <i class="fa fa-envelope" aria-hidden="true" class="me-1"></i>
+            <a href="mailto:needhome@email.com">needhome@email.com</a>
+          </div>
+          <div class="location d-flex align-items-center">
+            <i class="fa fa-map-pin" aria-hidden="true" class="me-1"></i>
+            <p class="d-inline">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="topbar-btn offset-md-4 col-md-1">
+          <div class="dropdown">
+            <a class="btn dropdown-toggle py-1 px-3" type="button" id="dropdownMenu4" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Eng
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button">FR</button></li>
+              <li><button class="dropdown-item" type="button">FR</button></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="NeedHome">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <div class="navbar-nav w-75 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Cities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Agents</a>
+            </li>
+          </div>
+          <div class="d-flex w-25 justify-content-end">
+            <!-- <a type="button" class="btn btn-primary-color me-2">Login</a> -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Login
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="text-center">Welcome</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                          type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                          type="button" role="tab" aria-controls="profile" aria-selected="false">Sign Up</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-1">
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control" id="username" placeholder="Username...">
+                          </div>
+                          <div class="col-sm-12">
+                            <input type="password" class="form-control" id="password" placeholder="Password...">
+                          </div>
+                          <p><a href="#">Forgot Passowrd?</a></p>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary-color btn-login"
+                              id="form-1-search">Login</button>
+                          </div><br><br>
+                          <p class="text-center">-or-</p>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-fb" id="form-1-search"><i
+                                class="fa fa-facebook me-2"></i>Login with Facebook</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-twitter" id="form-1-search"><i
+                                class="fa fa-twitter me-2"></i>Login with Twitter</a>
+                          </div>
+                          <div class="col-sm-12 mb-1">
+                            <a type="submit" class="btn btn-primary-color btn-social btn-google" id="form-1-search"><i
+                                class="fa fa-google me-2"></i>Login with Google</a>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form class="row gy-2 gx-3 align-items-center form-2">
+                          <div class="col-sm-6">
+                            <label for="firstname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="lastname" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name...">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"
+                              placeholder="8 characters, 1number, 1 symbol">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="rePassword" class="form-label">Re-enter Password</label>
+                            <input type="password" class="form-control" id="rePassword" placeholder="">
+                          </div>
+                          <div class="col-sm-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email...">
+                          </div>
+                          <div class="col-sm-12 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I agree to the Terms of Use/Privacy
+                              Policy</label>
+                          </div>
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-secondary-color btn-login" id="form-1-search">Sign
+                              Up</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Hero Section -->
+  <div class="hero-section my-2">
+    <div class="container d-flex flex-column justify-content-center">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Find Your New <br> <span>Construction</span> Home</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="form-div py-3 px-2">
+            <form class="row gy-2 gx-3 align-items-center form-1">
+              <div class="col-10 col-md-10 col-lg-10 col-sm-12">
+                <input type="text" class="form-control" id="cityName" placeholder="City, Neighborhood etc...">
+
+              </div>
+              <div class="col-2 col-md-2 col-lg-2 col-sm-12">
+                <button type="submit" class="btn btn-primary-color btn-search" id="form-1-search">Search</button>
+              </div>
+            </form>
+            <form class="row g-3 px-2 filter-form" id="filter-form">
+              <h4 class="text-center">Search Filters</h4>
+              <div class="col-12">
+                <!-- <input type="text" class="form-control" id="cityNameSame" placeholder="City, Neighborhood etc..."> -->
+
+              </div>
+              <div class="col-md-3">
+                <label for="propertyType" class="form-label">City</label>
+                <select id="propertyType" class="form-select" required>
+                  <option selected>Any</option>
+                  <option>Torronto</option>
+                  <option>Vaughan</option>
+                  <option>Mississauga</option>
+                </select>
+
+              </div>
+              <div class="col-md-3">
+                <label for="transactionType" class="form-label">Neighbourhood</label>
+                <select id="transactionType" class="form-select">
+                  <option selected>401 Business Park</option>
+                  <option>Adjala-Tosorontio</option>
+                  <option>Agincourt North, E07</option>
+                  <option>For Rent</option>
+                </select>
+              </div>
+              <div class="col-3">
+                <label for="minPrice" class="form-label">Min Price</label>
+                <input type="text" class="form-control" id="min-price" placeholder="Enter Minimum Amount..">
+              </div>
+              <div class="col-3">
+                <label for="maxnPrice" class="form-label">Max Price</label>
+                <input type="text" class="form-control" id="max-price" placeholder="Enter Maximum Amount..">
+              </div>
+              <div class="col-md-3">
+                <label for="beds" class="form-label">Beds</label>
+                <select id="beds" class="form-select">
+                  <option selected>Any</option>
+                  <option>1</option>
+                  <option>1+</option>
+                  <option>2</option>
+                  <option>2+</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="baths" class="form-label">Baths</label>
+                <select id="baths" class="form-select">
+                  <option selected>Any</option>
+                  <option>1</option>
+                  <option>1+</option>
+                  <option>2</option>
+                  <option>2+</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="landSize" class="form-label">Land Size</label>
+                <select id="landSize" class="form-select">
+                  <option selected>Any</option>
+                  <option>1+ acres</option>
+                  <option>2+ acres</option>
+                  <option>5+ acres</option>
+                  <option>10+ acres</option>
+                  <option>50+ acres</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="landSize" class="form-label">Sales Status</label>
+                <select id="landSize" class="form-select">
+                  <option selected>VIP Sales</option>
+                  <option>Coming Soon</option>
+                  <option>Planning</option>
+                  <option>Sold Out</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="landSize" class="form-label">Construction Status</label>
+                <select id="landSize" class="form-select">
+                  <option selected>Any</option>
+                  <option>Pre Construction</option>
+                  <option>Under Construction</option>
+                  <option>Construction Complete</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="landSize" class="form-label">Occupancy Date</label>
+                <select id="landSize" class="form-select">
+                  <option selected>Immediate</option>
+                  <option>30 Days</option>
+                  <option>90 Days</option>
+                  <option>6 Months</option>
+                  <option>1 Year</option>
+                  <option>18 Months</option>
+                  <option>2 years</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="landSize" class="form-label">Condo Amenities</label>
+                <select id="landSize" class="form-select">
+                  <option selected>Fitness</option>
+                  <option>Party Room</option>
+                  <option>Terrace</option>
+                  <option>Other</option>
+                  <option>Lounge</option>
+                  <option>Concierge</option>
+                  <option>Pool</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="landSize" class="form-label">Product Type</label>
+                <select id="landSize" class="form-select">
+                  <option selected>Condow</option>
+                  <option>Condow Hpmetown</option>
+                  <option>Loft</option>
+                  <option>Single Family</option>
+                  <option>Townhome</option>
+                  <option>Any</option>
+                </select>
+              </div>
+
+              <div class="col-md-3">
+                <label for="buildingTypes" class="form-label">Building Type</label>
+                <select id="buildingTypes" class="form-select">
+                  <option selected>Any</option>
+                  <option>House</option>
+                  <option>Row / Townhouse</option>
+                  <option>Apartment</option>
+                  <option>Duplex</option>
+                  <option>Triplex</option>
+                </select>
+              </div>
+              <div class="col-md-3 form-check-dov">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Open Houses Only
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="baths" class="form-label">Keywords</label>
+                <input type="text" class="form-control" id="keywords" placeholder="Waterfront, Garage, Pool...">
+              </div>
+
+              <div class="col-12 btn-div">
+                <button type="submit" class="btn btn-primary-color text-uppercase">Search</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+        <div class="col-sm-2">
+          <div class="filter-btn py-3 px-2 d-flex justify-content-center">
+            <div class="form-check form-switch">
+              <label class="form-check-label " for="formSwitchCheckDefault">Filters</label>
+              <input class="form-check-input " type="checkbox" id="formSwitchCheckDefault">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Featured Properties Section -->
+  <div class="featured my-5">
+    <div class="container">
+      <h1>Featured <span class="heading-clr">Propeties</span></h1>
+
+      <div class="row g-4 featured-carousel">
+        <div class="col-md-3  slider-items">
+          <a href="#" class="link d-block">
+            <div class="card h-100">
+              <img src="images/featured.png" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <span class="w-100 rent">Rent</span>
+                <h5 class="card-title">Manhattan View</h5>
+                <div class="price">$8000</div>
+                <div class="my-3 px-3 information d-flex justify-content-between">
+                  <div><img src="images/bed.png" alt=""> 3</div>
+                  <div><img src="images/shower.png" alt=""> 2</div>
+                  <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                </div>
+              </div>
+
+              <div class="card-footer px-4">
+                <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                  sit amet consectetur </small>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 slider-items">
+          <a href="#" class="link d-block">
+            <div class="card h-100">
+              <img src="images/featured.png" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <span class="w-100 rent">Rent</span>
+                <h5 class="card-title">Manhattan View</h5>
+                <div class="price">$8000</div>
+                <div class="my-3 px-3 information d-flex justify-content-between">
+                  <div><img src="images/bed.png" alt=""> 3</div>
+                  <div><img src="images/shower.png" alt=""> 2</div>
+                  <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                </div>
+              </div>
+
+              <div class="card-footer px-4">
+                <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                  sit amet consectetur </small>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 slider-items">
+          <a href="#" class="link d-block">
+            <div class="card h-100">
+              <img src="images/featured.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="w-100 rent">Rent</span>
+                <h5 class="card-title">Manhattan View</h5>
+                <div class="price">$8000</div>
+                <div class="my-3 px-3 information d-flex justify-content-between">
+                  <div><img src="images/bed.png" alt=""> 3</div>
+                  <div><img src="images/shower.png" alt=""> 2</div>
+                  <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                </div>
+              </div>
+              <div class="card-footer px-4">
+                <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                  sit amet consectetur </small>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 slider-items">
+          <a href="#" class="link d-block">
+            <div class="card h-100">
+              <img src="images/featured.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="w-100 rent">Rent</span>
+                <h5 class="card-title">Manhattan View</h5>
+                <div class="price">$8000</div>
+                <div class="my-3 px-3 information d-flex justify-content-between">
+                  <div><img src="images/bed.png" alt=""> 3</div>
+                  <div><img src="images/shower.png" alt=""> 2</div>
+                  <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                </div>
+              </div>
+              <div class="card-footer px-4">
+                <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                  sit amet consectetur </small>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 slider-items">
+          <a href="#" class="link d-block">
+            <div class="card h-100">
+              <img src="images/featured.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="w-100 rent">Rent</span>
+                <h5 class="card-title">Manhattan View</h5>
+                <div class="price">$8000</div>
+                <div class="my-3 px-3 information d-flex justify-content-between">
+                  <div><img src="images/bed.png" alt=""> 3</div>
+                  <div><img src="images/shower.png" alt=""> 2</div>
+                  <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                </div>
+              </div>
+              <div class="card-footer px-4">
+                <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                  sit amet consectetur </small>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 slider-items">
+          <a href="#" class="link d-block">
+            <div class="card h-100">
+              <img src="images/featured.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="w-100 rent">Rent</span>
+                <h5 class="card-title">Manhattan View</h5>
+                <div class="price">$8000</div>
+                <div class="my-3 px-3 information d-flex justify-content-between">
+                  <div><img src="images/bed.png" alt=""> 3</div>
+                  <div><img src="images/shower.png" alt=""> 2</div>
+                  <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                </div>
+              </div>
+              <div class="card-footer px-4">
+                <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                  sit amet consectetur </small>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 slider-items">
+          <a href="#" class="link d-block">
+            <div class="card h-100">
+              <img src="images/featured.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <span class="w-100 rent">Rent</span>
+                <h5 class="card-title">Manhattan View</h5>
+                <div class="price">$8000</div>
+                <div class="my-3 px-3 information d-flex justify-content-between">
+                  <div><img src="images/bed.png" alt=""> 3</div>
+                  <div><img src="images/shower.png" alt=""> 2</div>
+                  <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                </div>
+              </div>
+              <div class="card-footer px-4">
+                <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                  sit amet consectetur </small>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Buy / Rent Section   -->
+  <div class="buy mt-5">
+    <div class="container">
+      <h1>Move-in Ready <span class="heading-clr">Home</span></h1>
+      <div class="row">
+        <div class="col-md-3 col-sm-12">
+          <a href="#" class="d-block">
+            <div class="card mb-3 text-center">
+              <div class="card-body py-4">
+                <div class="icon mb-5">
+                  <i class="fa fa-file-text" aria-hidden="true"></i>
+                </div>
+                <h3 class="card-title mb-4">Buy</h3>
+                <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipiscing elit nunc, dapibus nam
+                  augue scelerisque suscipit nascetur et, nullam platea in tincidunt ante tristique cum. Ullamcorper
+                  mollis arcu eget urna morbi in, montes aenean cras semper purus suscipit rutrum, sociis eleifend
+                  himenaeos</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <a href="#" class="d-block">
+            <div class="card mb-3 text-center">
+              <div class="card-body py-4">
+                <div class="icon mb-5">
+                  <i class="fa fa-file-text" aria-hidden="true"></i>
+                </div>
+                <h3 class="card-title mb-4">Rent</h3>
+                <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipiscing elit nunc, dapibus nam
+                  augue scelerisque suscipit nascetur et, nullam platea in tincidunt ante tristique cum. Ullamcorper
+                  mollis arcu eget urna morbi in, montes aenean cras semper purus suscipit rutrum, sociis eleifend
+                  himenaeos</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <a href="#" class="d-block">
+            <div class="card mb-3 text-center">
+              <div class="card-body py-4">
+                <div class="icon mb-5">
+                  <i class="fa fa-file-text" aria-hidden="true"></i>
+                </div>
+                <h3 class="card-title mb-4">Sale</h3>
+                <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipiscing elit nunc, dapibus nam
+                  augue scelerisque suscipit nascetur et, nullam platea in tincidunt ante tristique cum. Ullamcorper
+                  mollis arcu eget urna morbi in, montes aenean cras semper purus suscipit rutrum, sociis eleifend
+                  himenaeos</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <a href="#" class="d-block">
+            <div class="card mb-3 text-center">
+              <div class="card-body py-4">
+                <div class="icon mb-5">
+                  <i class="fa fa-file-text" aria-hidden="true"></i>
+                </div>
+                <h3 class="card-title mb-4">Buy</h3>
+                <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipiscing elit nunc, dapibus nam
+                  augue scelerisque suscipit nascetur et, nullam platea in tincidunt ante tristique cum. Ullamcorper
+                  mollis arcu eget urna morbi in, montes aenean cras semper purus suscipit rutrum, sociis eleifend
+                  himenaeos</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mailchimp SEction -->
+  <div class="signup my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-sm-12">
+          <h1>Do you have any other questions?</h1>
+          <p>Put your email address and lets get connected</p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <form class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="" placeholder="Email Address...">
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-secondary-color">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Important Links</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">About us</a> </li>
+            <li> <a href="#">Careers</a> </li>
+            <li> <a href="#">Contact us</a> </li>
+            <li> <a href="#">Services</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Discover</h2>
+          <ul class="list-unstyled">
+            <li> <a href="#">Properties for sale</a> </li>
+            <li> <a href="#">Properties for rent</a> </li>
+            <li> <a href="#">Properties to buy</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Address</h2>
+          <p>Lorem ipsum dolor sit amet consectetur
+            adipiscing elit, nec tristique cubilia
+            class orci sociosqu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Address Bar -->
+  <div class="bottom-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-xs-12">
+          <p>All rights reserved &copy; needhome 2021</p>
+        </div>
+        <div class="col-sm-2 col-xs-12">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/magnific-popup.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
