@@ -8,9 +8,9 @@
 
   <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/jquery-ui.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+  <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/jquery-ui.structure.min.css"> -->
   <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+  <link rel="stylesheet" href="css/select2.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
@@ -225,119 +226,102 @@
                 <!-- <input type="text" class="form-control" id="cityNameSame" placeholder="City, Neighborhood etc..."> -->
 
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 filt-col">
                 <label for="propertyType" class="form-label">City</label>
-                <select id="propertyType" class="form-select" required>
-                  <option selected>Any</option>
-                  <option>Torronto</option>
-                  <option>Vaughan</option>
-                  <option>Mississauga</option>
-                </select>
-
+                <div>
+                  <select id="city" class="form-select" required>
+                    <option selected>Select</option>
+                    
+                  </select>
+                </div>
               </div>
-              <div class="col-md-3">
-                <label for="transactionType" class="form-label">Neighbourhood</label>
-                <select id="transactionType" class="form-select">
-                  <option selected>401 Business Park</option>
-                  <option>Adjala-Tosorontio</option>
-                  <option>Agincourt North, E07</option>
-                  <option>For Rent</option>
+              <div class="col-md-3 filt-col">
+                <label for="neighbourhood" class="form-label">Neighbourhood</label>
+                <select id="neighbourhood" class="form-select">
+                  <option selected>Select</option>
+                  
                 </select>
               </div>
-              <div class="col-3">
+              <div class="col-3 filt-col">
                 <label for="minPrice" class="form-label">Min Price</label>
-                <input type="text" class="form-control" id="min-price" placeholder="Enter Minimum Amount..">
+                <!-- <input type="text" class="form-control" id="min-price" placeholder="Enter Minimum Amount.."> -->
+                <div>
+                  <select id="min-price" class="form-select">
+                    <option value="" selected hidden>Select</option>
+                    <option></option>
+                  </select>
+                </div>
               </div>
-              <div class="col-3">
+              <div class="col-3 filt-col">
                 <label for="maxnPrice" class="form-label">Max Price</label>
-                <input type="text" class="form-control" id="max-price" placeholder="Enter Maximum Amount..">
+                <!-- <input type="text" class="form-control" id="max-price" placeholder="Enter Maximum Amount.."> -->
+                <div>
+                  <select id="max-price" class="form-select">
+                    <option value="" selected hidden>Select</option>
+                    <option></option>
+                  </select>
+                </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 filt-col">
                 <label for="beds" class="form-label">Beds</label>
-                <select id="beds" class="form-select">
-                  <option selected>Any</option>
-                  <option>1</option>
-                  <option>1+</option>
-                  <option>2</option>
-                  <option>2+</option>
-                </select>
+                <div>
+                  <select id="beds" class="form-select">
+                    <option selected>Select</option>
+                    
+                  </select>
+                </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 filt-col">
                 <label for="baths" class="form-label">Baths</label>
-                <select id="baths" class="form-select">
-                  <option selected>Any</option>
-                  <option>1</option>
-                  <option>1+</option>
-                  <option>2</option>
-                  <option>2+</option>
-                </select>
+                <div>
+                  <select id="baths" class="form-select">
+                    <option selected>Any</option>
+                    
+                  </select>
+                </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 filt-col">
                 <label for="landSize" class="form-label">Land Size</label>
-                <select id="landSize" class="form-select">
+                <div>
+                  <select id="landSize" class="form-select">
+                    <option selected>Any</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3 filt-col">
+                <label for="vipsales" class="form-label">Sales Status</label>
+                <div>
+                  <select id="vipsales" class="form-select">
+                    <option selected>Any</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3 filt-col">
+                <label for="const-status" class="form-label">Construction Status</label>
+                <select id="const-status" class="form-select">
                   <option selected>Any</option>
-                  <option>1+ acres</option>
-                  <option>2+ acres</option>
-                  <option>5+ acres</option>
-                  <option>10+ acres</option>
-                  <option>50+ acres</option>
                 </select>
               </div>
-              <div class="col-md-3">
-                <label for="landSize" class="form-label">Sales Status</label>
-                <select id="landSize" class="form-select">
-                  <option selected>VIP Sales</option>
-                  <option>Coming Soon</option>
-                  <option>Planning</option>
-                  <option>Sold Out</option>
-                </select>
-              </div>
-              <div class="col-md-3">
-                <label for="landSize" class="form-label">Construction Status</label>
-                <select id="landSize" class="form-select">
-                  <option selected>Any</option>
-                  <option>Pre Construction</option>
-                  <option>Under Construction</option>
-                  <option>Construction Complete</option>
-                </select>
-              </div>
-              <div class="col-md-3">
-                <label for="landSize" class="form-label">Occupancy Date</label>
-                <select id="landSize" class="form-select">
+              <div class="col-md-3 filt-col">
+                <label for="occupancy" class="form-label">Occupancy Date</label>
+                <select id="occupancy" class="form-select">
                   <option selected>Immediate</option>
-                  <option>30 Days</option>
-                  <option>90 Days</option>
-                  <option>6 Months</option>
-                  <option>1 Year</option>
-                  <option>18 Months</option>
-                  <option>2 years</option>
                 </select>
               </div>
-              <div class="col-md-3">
-                <label for="landSize" class="form-label">Condo Amenities</label>
-                <select id="landSize" class="form-select">
-                  <option selected>Fitness</option>
-                  <option>Party Room</option>
-                  <option>Terrace</option>
-                  <option>Other</option>
-                  <option>Lounge</option>
-                  <option>Concierge</option>
-                  <option>Pool</option>
+              <div class="col-md-3 filt-col">
+                <label for="condo" class="form-label">Condo Amenities</label>
+                <select id="condo" class="form-select">
+                  <option selected>Select</option>
                 </select>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 filt-col">
                 <label for="landSize" class="form-label">Product Type</label>
-                <select id="landSize" class="form-select">
-                  <option selected>Condow</option>
-                  <option>Condow Hpmetown</option>
-                  <option>Loft</option>
-                  <option>Single Family</option>
-                  <option>Townhome</option>
-                  <option>Any</option>
+                <select id="prod-type" class="form-select">
+                  <option selected>Any</option>
                 </select>
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-3 filt-col">
                 <label for="buildingTypes" class="form-label">Building Type</label>
                 <select id="buildingTypes" class="form-select">
                   <option selected>Any</option>
@@ -356,9 +340,11 @@
                   </label>
                 </div>
               </div>
-              <div class="col-md-3">
-                <label for="baths" class="form-label">Keywords</label>
-                <input type="text" class="form-control" id="keywords" placeholder="Waterfront, Garage, Pool...">
+              <div class="col-md-3 filt-col">
+                <label for="keywords" class="form-label">Keywords</label>
+                <select id="keywords" class="form-select">
+                  <option selected>Any</option>
+                </select>
               </div>
 
               <div class="col-12 btn-div">
@@ -697,8 +683,9 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
-  <script src="js/jquery-ui.min.js"></script>
-  <script src="js/magnific-popup.js"></script>
+  <script src="js/select2.min.js"></script>
+  <!-- <script src="js/jquery-ui.min.js"></script> -->
+  <!-- <script src="js/magnific-popup.js"></script> -->
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 
