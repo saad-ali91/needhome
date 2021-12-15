@@ -925,59 +925,106 @@ $(function(){
   $('#min-price').select2({
     data: minPrice,
     allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
-  $("#min-price").select2("val", "");
+  
   var maxPrice = [30000, 35000, 40000, 50000, 60000];
   $('#max-price').select2({
-    data: maxPrice
+    data: maxPrice,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var neighbourhoodForm = ['401 Business Park', 'Adjala-Tosorontio','Agincourt North, E07'];
   $('#neighbourhood-form').select2({
-    data: neighbourhoodForm
+    data: neighbourhoodForm,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var city = ['Torronto', 'Vaughan','Mississauga'];
   $('#city').select2({
-    data: city
+    data: city,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var beds = ['1', '1+','2','2+'];
   $('#beds').select2({
-    data: beds
+    data: beds,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var baths = ['1', '1+','2','2+'];
   $('#baths').select2({
-    data: baths
+    data: baths,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var landSize = ['1+ acres', '2+ acres','5+ acres','10+ acres','50+ acres'];
   $('#landSize').select2({
-    data: landSize
+    data: landSize,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var vipsales = ['VIP Sales', 'Coming Soon','Planning','Sold Out'];
   $('#vipsales').select2({
-    data: vipsales
+    data: vipsales,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var constStatus = ['Pre Construction', 'Under Construction','Construction Complete'];
   $('#const-status').select2({
-    data: constStatus
+    data: constStatus,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var occupancyForm = ['30 Days', '90 Days','6 Months','1 Year','18 Months','2 years'];
   $('#occupancy-form').select2({
-    data: occupancyForm
+    data: occupancyForm,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var condo = ['Fitness', 'Party Room','Terrace','Other','Lounge','Concierge','Pool'];
   $('#condo').select2({
-    data: condo
+    data: condo,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var prodType = ['Condow', 'Condow Hometown','Loft','Single Family','Townhome'];
   $('#prod-type').select2({
-    data: prodType
+    data: prodType,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var buildingTypes = ['House', 'Row / Townhouse','Apartment','Duplex','Triplex'];
   $('#buildingTypes').select2({
-    data: buildingTypes
+    data: buildingTypes,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
   var keywords = ['Waterfront', 'Garage','Pool'];
   $('#keywords').select2({
-    data: keywords
+    data: keywords,
+    allowClear: true,
+    tags: true,
+    placeholder: "Select"
   });
 
 })
+
+$(function(){
+  $('#homeReset').click(function(){
+    $('#min-price,#max-price,#neighbourhood-form,#city,#beds,#baths,#landSize,#vipsales,#const-status,#occupancy-form,#condo,#prod-type,#buildingTypes,#keywords').select2('val', 'All');
+  });
+});
