@@ -789,7 +789,7 @@ nav .btn-secondary-color:hover {
     margin-right: 0;
     margin-left: 0;
     z-index: 555;
-    top: 77px;
+    /* top: 77px; */
     padding: 10px 5px!important;
 }
 #filter-form input::placeholder{
@@ -2148,7 +2148,9 @@ nav .btn-secondary-color:hover {
         font-size: 15px;
         padding: 8px 3px;
     }
-
+    .listing-map .list-map-cont .col-sm-12{
+        width: 40%;
+    }
     nav .btn-primary-color,
     nav .btn-secondary-color {
         padding: 10px 20px;
@@ -2213,6 +2215,9 @@ nav .btn-secondary-color:hover {
     }
     .main-desc-cont .equal-div{
         flex-direction: column;
+    }
+    .hero-section .container .row:last-child .filter-btn{
+        width: 40%;
     }
     .main-gallery-nav{
         display: none;
