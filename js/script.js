@@ -105,15 +105,15 @@ $(document).ready(function(){
   });
 
 
-  $(document).ready(function() {
-    $('.floor-gallery').magnificPopup({
-      type:'image',
-      delegate: 'a',
-      gallery: {
-        enabled: true
-      }
-    });
-    });
+  // $(document).ready(function() {
+  //   $('.floor-gallery').magnificPopup({
+  //     type:'image',
+  //     delegate: 'a',
+  //     gallery: {
+  //       enabled: true
+  //     }
+  //   });
+  //   });
 
 
 $(function(){
@@ -151,6 +151,7 @@ $(document).ready(function(){
 $(function(){
   $('#formSwitchCheckDefault').click(function(){
     $('.form-div .g-3').toggleClass('filter-form');
+    $('#cityName').toggleClass('filter-form');
     $('.form-div .btn-search').toggleClass('filter-form');
     $('.form-1 .col-sm-12').toggleClass('form-width');
     $('.form-div').toggleClass('border-radius-form');
@@ -922,8 +923,10 @@ $(function(){
 $(function(){
   var minPrice = [1000, 2000,1000, 15000, 20000];
   $('#min-price').select2({
-    data: minPrice
+    data: minPrice,
+    allowClear: true,
   });
+  $("#min-price").select2("val", "");
   var maxPrice = [30000, 35000, 40000, 50000, 60000];
   $('#max-price').select2({
     data: maxPrice
