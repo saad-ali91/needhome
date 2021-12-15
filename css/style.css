@@ -1849,6 +1849,9 @@ nav .btn-secondary-color:hover {
 .select2{
     font-family: var(--paragraph-font)!important;
 }
+.hero-section .select2-selection__placeholder{
+    color: #726969!important;
+}
 
 
 
