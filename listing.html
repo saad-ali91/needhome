@@ -233,6 +233,10 @@
                  <div>
                   <input type="text" class="form-control" placeholder="Search...">
                  </div>
+                 <div class="my-2 btn-group">
+                  <input type="reset" value="Reset" class="btn btn-secondary reset text-light">
+                  <input type="button" value="Search" class="btn btn-primary-color text-light">
+                </div>
                  <div class="accordion accordion-flush" id="accordionFlushExample">
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
@@ -712,21 +716,24 @@
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false" aria-controls="flush-collapseFourteen">
                        Deposit %
                       </button>
+                      <div class="javascr">
+                        <p class="price-names" id="deposit"></p><span class="deposit-doll-1 dollar">% &nbsp;</span> <p id="deposit_too"></p><p id="depositto"></p><span class="deposit-doll-2 dollar">%</span>
+                      </div>
                     </h2>
                     <div id="flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         <div>
-                          <label for="fromDeposit" class="form-label">
+                          <label for="deposit-from" class="form-label">
                             From
                           </label>
-                          <input type="text" class="form-control" placeholder="From...">
+                          <input type="text" id="deposit-from" class="form-control" placeholder="From...">
                         </div>
                         <div class="accordion-body">
                           <div>
-                            <label for="toDeposit" class="form-label">
+                            <label for="deposit-to" class="form-label">
                               To
                             </label>
-                            <input type="text" class="form-control" placeholder="To...">
+                            <input type="text" id="deposit-to" class="form-control" placeholder="To...">
                           </div>
                       </div>
                     </div>
@@ -815,7 +822,10 @@
                     </div>
                   </div>
                 </div>
-                <input type="reset" value="Reset" class="btn reset text-light">
+                <div class="my-2 btn-group">
+                  <input type="reset" value="Reset" class="btn btn-secondary reset text-light">
+                  <input type="button" value="Search" class="btn btn-primary-color text-light">
+                </div>
                </form>
             </div>
         </div>
@@ -823,182 +833,98 @@
       <div class="col-md-8 col-sm-12">
         <div class="search-result">
           <div class="row mb-3">
-            <p>Showing <span>6</span> results of <span>12</span></p>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
-                    </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
-                </div>
-              </a>
+            <div class="result-div">
+              <p>Showing <span>6</span> results of <span>12</span></p>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
-                    </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
-                </div>
-              </a>
+            <div class="listing-searchfil">
+              <input type="text" placeholder="Search Property..." class="form-control listing-searchfilter" id="2-col-input">
             </div>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+            <ul class="d-flex" id="2-col-ul">
+              <li class="me-2">
+                <div class="col-sm-12 mb-3">
+                  <a href="#" class="link d-block">
+                    <div class="card h-100">
+                      <img src="images/featured.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <span class="w-100 rent">Rent</span>
+                        <h5 class="card-title">Manhattan View</h5>
+                        <div class="price">$8000</div>
+                        <div class="my-3 px-3 information d-flex justify-content-between">
+                          <div><img src="images/bed.png" alt=""> 3</div>
+                          <div><img src="images/shower.png" alt=""> 2</div>
+                          <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                        </div>
+                      </div>
+        
+                      <div class="card-footer px-4">
+                        <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                          sit amet consectetur </small>
+                      </div>
                     </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
+              </li>
+              <li class="me-2">
+                <div class="col-sm-12 mb-3">
+                  <a href="#" class="link d-block">
+                    <div class="card h-100">
+                      <img src="images/featured.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <span class="w-100 rent">Sold</span>
+                        <h5 class="card-title">Ontario View</h5>
+                        <div class="price">$5050</div>
+                        <div class="my-3 px-3 information d-flex justify-content-between">
+                          <div><img src="images/bed.png" alt=""> 3</div>
+                          <div><img src="images/shower.png" alt=""> 2</div>
+                          <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                        </div>
+                      </div>
+        
+                      <div class="card-footer px-4">
+                        <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                          sit amet consectetur </small>
+                      </div>
                     </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
-                    </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
-                    </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
-                    </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-6 col-sm-12 mb-3">
-              <a href="#" class="link d-block">
-                <div class="card h-100">
-                  <img src="images/featured.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <span class="w-100 rent">Rent</span>
-                    <h5 class="card-title">Manhattan View</h5>
-                    <div class="price">$8000</div>
-                    <div class="my-3 px-3 information d-flex justify-content-between">
-                      <div><img src="images/bed.png" alt=""> 3</div>
-                      <div><img src="images/shower.png" alt=""> 2</div>
-                      <div><img src="images/ruler.png" alt=""> 300sqft</div>
-                    </div>
-                  </div>
-    
-                  <div class="card-footer px-4">
-                    <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
-                      sit amet consectetur </small>
-                  </div>
-                </div>
-              </a>
+              </li>
+            </ul>
+
+            <div class="pagination">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
             
           </div>
@@ -1026,6 +952,10 @@
                  <div>
                   <input type="text" class="form-control" placeholder="Search...">
                  </div>
+                 <div class="my-2 btn-group">
+                  <input type="reset" value="Reset" class="btn btn-secondary reset text-light">
+                  <input type="button" value="Search" class="btn btn-primary-color text-light">
+                </div>
                  <div class="accordion accordion-flush" id="accordionFlushExample-2">
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
@@ -1496,21 +1426,24 @@
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFourteen" aria-expanded="false" aria-controls="map-flush-collapseFourteen">
                        Deposit %
                       </button>
+                      <div class="javascr">
+                        <p class="price-names" id="map-deposit"></p><span class="map-deposit-doll-1 dollar">% &nbsp;</span> <p id="map-deposit_too"></p><p id="map-depositto"></p><span class="map-deposit-doll-2 dollar">% ft</span>
+                      </div>
                     </h2>
                     <div id="map-flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample-2">
                       <div class="accordion-body">
                         <div>
-                          <label for="fromDeposit" class="form-label">
+                          <label for="map-deposit-from"  class="form-label">
                             From
                           </label>
-                          <input type="text" class="form-control" placeholder="From...">
+                          <input type="text" id="map-deposit-from" class="form-control" placeholder="From...">
                         </div>
                         <div class="accordion-body">
                           <div>
-                            <label for="toDeposit" class="form-label">
+                            <label for="map-deposit-to" class="form-label">
                               To
                             </label>
-                            <input type="text" class="form-control" placeholder="To...">
+                            <input type="text" id="map-deposit-to" class="form-control" placeholder="To...">
                           </div>
                       </div>
                     </div>
@@ -1598,9 +1531,12 @@
                       </div>
                     </div>
                   </div>
-                  <input type="reset" value="Reset" class="btn  reset text-light">
+                  
                 </div>
-                
+                <div class="my-2 btn-group">
+                  <input type="reset" value="Reset" class="btn btn-secondary reset text-light">
+                  <input type="button" value="Search" class="btn btn-primary-color text-light">
+                </div>
                </form>
             </div>
         </div>
@@ -1612,131 +1548,25 @@
       </div>
       <div class="col-md-4 overflow-scroll">
         <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
+          <input type="text" class="form-control mb-2" placeholder="Enter Property..." id="map-input">
+          <ul class="list-group" id="map-ul">
+            <li>
+              <a href="">
+                <div class="col-md-4">
+                  <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Manhattan View</h5>
+                    <p class="card-text">$ 30,000</p>
+                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row g-0 list-card">
-          <a href="">
-            <div class="col-md-4">
-              <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Manhattan View</h5>
-                <p class="card-text">$ 30,000</p>
-                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-              </div>
-            </div>
-          </a>
-        </div>
+
       </div>
     </div>
   </div>
