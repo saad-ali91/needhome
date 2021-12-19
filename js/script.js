@@ -128,8 +128,10 @@ $(function(){
 })
 
 $(function(){
+  $('.listing-map .form-div').css('display','none');
   $('.filter-div .fa').click(function(){
-    $('.listing-map .accordion').toggle(500);
+    $('.listing-map .form-div').toggle(100);
+    $('.listing-map .accordion').toggle(100);
     $('.listing-map .scroll-class').toggleClass('scroll-1');
   })
 })
@@ -138,6 +140,14 @@ $(function(){
 
 // Single List Filter
 $(document).ready(function(){
+  $("#soldInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#sold-ul li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+$(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#myList li").filter(function() {
@@ -145,6 +155,30 @@ $(document).ready(function(){
     });
   });
 });
+
+// Listing 2 Col Input
+$(document).ready(function(){
+  $("#2-col-input").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#2-col-ul li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+
+// Listing Filter
+$(document).ready(function(){
+  $("#listing-searchfilter").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#listing-search-fil li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
 
 
 // Main Header Section Filter
@@ -223,8 +257,24 @@ $(function(){
   })
 })
 
-
-
+// Only Numbers for Listing Filters
+$(function(){
+  $(document).on('keypress', '#price-from,#price-to,#p-sqft-from,#p-sqft-to,#bed-from,#bed-to,#bath-from,#bath-to,#sizesq-from,#sizesq-to,#deposit-from,#deposit-to', function () {
+    $(this).val($(this).val().replace(/[^\d].+/, ""));
+    if ((event.which < 48 || event.which > 57)) {
+      event.preventDefault();
+    }
+});
+})
+// Only Numbers for Map Listing Filters
+$(function(){
+  $(document).on('keypress', '#map-price-from,#map-price-to,#map-p-sqft-from,#map-p-sqft-to,#map-bed-from,#map-bed-to,#map-bath-from,#map-bath-to,#smap-izesq-from,#map-sizesq-to,#map-deposit-from,#map-deposit-to', function () {
+    $(this).val($(this).val().replace(/[^\d].+/, ""));
+    if ((event.which < 48 || event.which > 57)) {
+      event.preventDefault();
+    }
+});
+})
 
 // Listing Price Range 
 $(function(){
@@ -572,6 +622,72 @@ $(function(){
 })
 
 
+// Listing Deposit
+$(function(){
+  $('#deposit-from').blur(function(){
+    var selValue = $("#deposit-from").val(); 
+    if((selValue).length === '' || (selValue).length < 1){
+      $('#deposit').css('display', 'none');
+      $('#deposit_too').css('display','none');
+      $('.deposit-doll-1').css('display','none');
+    }else {
+      $('.deposit-doll-1').css('display', 'block');
+      $('#deposit').css('display', 'block');
+      $('.deposit-doll-1').css('display','block');
+      $('.deposit-doll-2').css('display','none');
+      $('#deposit').text(selValue);
+    }
+  })
+  $('#deposit-to').blur(function(){
+    var selValue = $("#deposit-to").val(); 
+    if((selValue).length === '' || (selValue).length < 1){
+      $('#deposit_too').css('display','block');
+      $('#deposit_too').text('and more');
+      $('#depositto').css('display', 'none');
+      $('.deposit-doll-2').css('display','none');
+    }
+    else {
+      $('#deposit_too').css('display','block');
+       $('#deposit_too').text('to');
+      $('#depositto').css('display', 'block');
+      $('#depositto').text(selValue);
+      $('.deposit-doll-2').css('display','block');
+    }
+  })
+})
+// Map Listing Deposit
+$(function(){
+  $('#map-deposit-from').blur(function(){
+    var selValue = $("#map-deposit-from").val(); 
+    if((selValue).length === '' || (selValue).length < 1){
+      $('#map-deposit').css('display', 'none');
+      $('#map-deposit_too').css('display','none');
+      $('.map-deposit-doll-1').css('display','none');
+    }else {
+      $('.map-deposit-doll-1').css('display', 'block');
+      $('#map-deposit').css('display', 'block');
+      $('.map-deposit-doll-1').css('display','block');
+      $('.map-deposit-doll-2').css('display','none');
+      $('#map-deposit').text(selValue);
+    }
+  })
+  $('#map-deposit-to').blur(function(){
+    var selValue = $("#map-deposit-to").val(); 
+    if((selValue).length === '' || (selValue).length < 1){
+      $('#map-deposit_too').css('display','block');
+      $('#map-deposit_too').text('and more');
+      $('#map-depositto').css('display', 'none');
+      $('.map-deposit-doll-2').css('display','none');
+    }
+    else {
+      $('#map-deposit_too').css('display','block');
+       $('#map-deposit_too').text('to');
+      $('#map-depositto').css('display', 'block');
+      $('#map-depositto').text(selValue);
+      $('.map-deposit-doll-2').css('display','block');
+    }
+  })
+})
 
 
 
@@ -926,15 +1042,23 @@ $(function(){
     data: minPrice,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Min Price",
+    
   });
+ 
+//   $(document).on('keypress', '.select2-search__field', function () {
+//     $(this).val($(this).val().replace(/[^\d].+/, ""));
+//     if ((event.which < 48 || event.which > 57)) {
+//       event.preventDefault();
+//     }
+// });
   
   var maxPrice = [30000, 35000, 40000, 50000, 60000];
   $('#max-price').select2({
     data: maxPrice,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Max Price"
   });
   var neighbourhoodForm = ['401 Business Park', 'Adjala-Tosorontio','Agincourt North, E07'];
   $('#neighbourhood-form').select2({
@@ -962,35 +1086,35 @@ $(function(){
     data: baths,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Any"
   });
   var landSize = ['1+ acres', '2+ acres','5+ acres','10+ acres','50+ acres'];
   $('#landSize').select2({
     data: landSize,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Any"
   });
   var vipsales = ['VIP Sales', 'Coming Soon','Planning','Sold Out'];
   $('#vipsales').select2({
     data: vipsales,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Any"
   });
   var constStatus = ['Pre Construction', 'Under Construction','Construction Complete'];
   $('#const-status').select2({
     data: constStatus,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Any"
   });
   var occupancyForm = ['30 Days', '90 Days','6 Months','1 Year','18 Months','2 years'];
   $('#occupancy-form').select2({
     data: occupancyForm,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Immediate"
   });
   var condo = ['Fitness', 'Party Room','Terrace','Other','Lounge','Concierge','Pool'];
   $('#condo').select2({
@@ -1004,21 +1128,21 @@ $(function(){
     data: prodType,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Any"
   });
   var buildingTypes = ['House', 'Row / Townhouse','Apartment','Duplex','Triplex'];
   $('#buildingTypes').select2({
     data: buildingTypes,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "Any"
   });
   var keywords = ['Waterfront', 'Garage','Pool'];
   $('#keywords').select2({
     data: keywords,
     allowClear: true,
     tags: true,
-    placeholder: "Select"
+    placeholder: "..."
   });
 
 })
@@ -1026,5 +1150,45 @@ $(function(){
 $(function(){
   $('#homeReset').click(function(){
     $('#min-price,#max-price,#neighbourhood-form,#city,#beds,#baths,#landSize,#vipsales,#const-status,#occupancy-form,#condo,#prod-type,#buildingTypes,#keywords').select2('val', 'All');
+  });
+});
+
+
+
+// Slider Single Property Page
+$(document).ready(function(){
+  $('.slider-single-prop').slick({
+      infinite: true,
+      slidesToShow: 2,
+      prevArrow:'<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>',
+      nextArrow:'<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>',
+      responsive: [
+          {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+              }
+            },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
   });
 });
