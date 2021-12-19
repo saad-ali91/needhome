@@ -869,6 +869,7 @@ nav .btn-secondary-color:hover {
     font-family: var(--paragraph-font);
     max-height: 700px;
     overflow: scroll;
+    overflow-x: hidden;
 }
 .listing .search-filter h4{
     font-size: 25px;
@@ -993,6 +994,24 @@ nav .btn-secondary-color:hover {
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
 }
+.listing .listing-searchfil{
+    margin-bottom: 10px;
+}
+.listing .listing-searchfil input{
+    border: 1px solid rgba(201,201,201,0.37);
+    color: var(--primary-color);
+    font-size: 14px;
+    font-family: var(--paragraph-font);
+}
+.listing .listing-searchfil input::placeholder{
+    font-size: 14px;
+    color: var(--text-color);
+    font-family: var(--paragraph-font);
+}
+.listing .listing-searchfil input:focus{
+    box-shadow: 0px 0px 19px 0px rgb(169, 169, 169, 0.39);
+}
+
 
 .listing-map{
     padding: 20px;
@@ -1007,6 +1026,8 @@ nav .btn-secondary-color:hover {
     position: absolute;
     padding: 10px;
     border: 1px solid var(--border-color);
+    overflow-x: hidden;
+    top: -50px;
 }
 .listing-map .list-map-cont h4{
     font-size: 25px;
@@ -1149,11 +1170,13 @@ nav .btn-secondary-color:hover {
     /* display: flex;
     align-items: center;
     text-transform: uppercase; */
+    font-size: 24px;
+    font-weight: 500;
 }
 .name-container .price-prop span{
     margin-left: 5px;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
 }
 .name-container .share-icons{
    width: 100%;
@@ -1270,6 +1293,109 @@ nav .btn-secondary-color:hover {
 .description-container .container .row>.col-sm-12{
     margin-bottom: 30px;
 }
+.description-container .small-desc-div {
+    color: var(--text-lightcolor);
+    line-height: 1.7;
+    font-size: 15px;
+}
+.description-container table{
+    font-family: var(--paragraph-font);
+    color: var(--primary-color);
+    font-size: 14px;
+    text-align: center;
+}
+.description-container .fa-map-pin{
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+.description-container .name-container .location p{
+    color: var(--text-color);
+}
+.description-container .featured-dev .col-sm-11{
+    margin: 0 auto;
+}
+.description-container .featured-dev .col-sm-11 .link{
+    margin-right: 10px;
+    
+}
+.description-container .card{
+    border-radius: 32px;
+    transition: all 0.5s;
+}
+.description-container .card:hover{
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.36);
+}
+.description-container .featured-dev .card img{
+    border-radius: 32px;
+}
+.description-container .col-sm-11 .fa{
+    position: absolute;
+    color: #2BCCAC;
+    font-size: 25px;
+    z-index: 55;
+    display: block;
+    cursor: pointer;
+}
+.description-container .col-sm-11 .fa-chevron-circle-left{
+    left: -3.5%;
+    top: 40%;
+    z-index: 55;
+}
+.description-container .col-sm-11 .fa-chevron-circle-right{
+    right: -2.5%;
+    top: 40%;
+    z-index: 55;
+}
+.description-container .col-sm-11 .card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 22px;
+}
+.description-container .rent {
+    color: var(--text-color);
+    font-family: var(--paragraph-font);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.description-container .price {
+    font-family: var(--paragraph-font);
+    color: var(--secondary-hover);
+    font-size: 16px;
+    font-weight: 700;
+}
+.description-container .information{
+    font-family: var(--paragraph-font);
+    color: var(--text-color);
+    font-size: 11px;
+}
+.description-container .card-footer {
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+.description-container .card-footer img{
+    display: inline;
+}
+
+#map-input{
+    border: 1px solid rgba(201,201,201,0.37);
+    color: var(--primary-color);
+    font-size: 14px;
+    font-family: var(--paragraph-font);
+}
+#map-input:focus{
+    box-shadow: 0px 0px 19px 0px rgb(169, 169, 169, 0.39); 
+}
+#map-input::placeholder{
+    color: var(--text-lightcolor);
+    font-size: 14px;
+}
+
+
+.features p{
+    line-height: 1.7;
+    font-size: 15px;
+    color: var(--text-lightcolor);
+}
 .features {
     padding: 0px 30px 60px;
 }
@@ -1286,11 +1412,12 @@ nav .btn-secondary-color:hover {
 }
 .features .icons .fa{
     color: var(--secondary-color);
-    font-size: 25px;
+    font-size: 18px;
     margin-right: 8px;
 }
 .features .icons .flex-icon{
     display: flex;
+    align-items: center;
 }
 .features .icons p{
     color: var(--text-lightcolor);
@@ -1417,6 +1544,7 @@ nav .btn-secondary-color:hover {
 }
 .listing-map .overflow-scroll{
     height: 600px;
+    overflow-x: hidden!important;
 }
 .scroll-1{
     height: 600px;
@@ -1558,16 +1686,17 @@ nav .btn-secondary-color:hover {
     color: #f66!important;
 }
 .reset{
-    background-color: var(--primary-color);
-    display: block;
+    background-color: #6c757d;
+    /* display: block; */
     margin: 0 auto;
-    margin-top: 5px;
-    padding: 5px 20px;
+    /* margin-top: 5px; */
+    padding: 8px 30px;
     transition: all 0.5s;
     border: none!important;
+    text-transform: uppercase;
 }
 .reset:focus{
-    background-color: var(--primary-hover);
+    /* background-color: var(--primary-hover); */
     border: none;
 }
 .reset:visited{
@@ -1575,8 +1704,13 @@ nav .btn-secondary-color:hover {
     box-shadow: none;
 }
 .reset:hover{
-    background-color: var(--primary-hover);
+    /* background-color: var(--primary-hover); */
 }
+.btn-group{
+    display: flex;
+    justify-content: center;
+}
+
 .accordion-item{
     border: none;
 }
@@ -1852,6 +1986,47 @@ nav .btn-secondary-color:hover {
 .hero-section .select2-selection__placeholder{
     color: #726969!important;
 }
+.pagination{
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.pagination nav {
+    width: 100%;
+}
+.pagination nav ul a {
+    color: var(--primary-color);
+}
+.pagination nav ul a:hover{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.pagination .page-item.active .page-link{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.result-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.result-div nav{
+    box-shadow: none;
+}
+.result-div nav ul{
+    margin-top: 0;
+}
+.result-div nav ul a {
+    color: var(--primary-color);
+}
+.result-div nav ul a:hover{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.result-div .pagination .page-item.active .page-link{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
 
 
 
