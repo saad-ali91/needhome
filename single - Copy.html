@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+  <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/jquery-ui.structure.min.css"> -->
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@200;400;500;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="css/select2.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+    <title>needhome-Single Property</title>
+  </head>
+
+  <body>
+    <div class="fixed sticky-top">
+      <div class="topbar">
+        <div
+          class="
+            container
+            d-flex
+            justify-content-between
+            align-items-center
+            py-1
+          "
+        >
+          <div class="contact d-flex justify-content-between col-md-7">
+            <div class="phone d-flex align-items-center">
+              <i class="fa fa-phone" aria-hidden="true" class="me-1"></i>
+              <a href="tel:+923001000006">+92 300 1000006</a>
+            </div>
+            <div class="email d-flex align-items-center">
+              <i class="fa fa-envelope" aria-hidden="true" class="me-1"></i>
+              <a href="mailto:needhome@email.com">needhome@email.com</a>
+            </div>
+            <div class="location d-flex align-items-center">
+              <i class="fa fa-map-pin" aria-hidden="true" class="me-1"></i>
+              <p class="d-inline">Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+          </div>
+          <div class="topbar-btn offset-md-4 col-md-1">
+            <div class="dropdown">
+              <a
+                class="btn dropdown-toggle py-1 px-3"
+                type="button"
+                id="dropdownMenu4"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Eng
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">FR</button></li>
+                <li><button class="dropdown-item" type="button">FR</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="NeedHome" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mynavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <div class="navbar-nav w-75 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Cities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Agents</a>
+              </li>
+            </div>
+            <div class="d-flex w-25 justify-content-end">
+              <!-- <a type="button" class="btn btn-primary-color me-2">Login</a> -->
+
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-primary-color"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Login
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="text-center">Welcome</h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="home-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#home"
+                            type="button"
+                            role="tab"
+                            aria-controls="home"
+                            aria-selected="true"
+                          >
+                            Login
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="profile-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#profile"
+                            type="button"
+                            role="tab"
+                            aria-controls="profile"
+                            aria-selected="false"
+                          >
+                            Sign Up
+                          </button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div
+                          class="tab-pane fade show active"
+                          id="home"
+                          role="tabpanel"
+                          aria-labelledby="home-tab"
+                        >
+                          <form class="row gy-2 gx-3 align-items-center form-1">
+                            <div class="col-sm-12">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="username"
+                                placeholder="Username..."
+                              />
+                            </div>
+                            <div class="col-sm-12">
+                              <input
+                                type="password"
+                                class="form-control"
+                                id="password"
+                                placeholder="Password..."
+                              />
+                            </div>
+                            <p><a href="#">Forgot Passowrd?</a></p>
+                            <div class="col-sm-12">
+                              <button
+                                type="submit"
+                                class="btn btn-primary-color btn-login"
+                                id="form-1-search"
+                              >
+                                Login
+                              </button>
+                            </div>
+                            <br /><br />
+                            <p class="text-center">-or-</p>
+                            <div class="col-sm-12 mb-1">
+                              <a
+                                type="submit"
+                                class="btn btn-primary-color btn-social btn-fb"
+                                id="form-1-search"
+                                ><i class="fa fa-facebook me-2"></i>Login with
+                                Facebook</a
+                              >
+                            </div>
+                            <div class="col-sm-12 mb-1">
+                              <a
+                                type="submit"
+                                class="
+                                  btn btn-primary-color btn-social btn-twitter
+                                "
+                                id="form-1-search"
+                                ><i class="fa fa-twitter me-2"></i>Login with
+                                Twitter</a
+                              >
+                            </div>
+                            <div class="col-sm-12 mb-1">
+                              <a
+                                type="submit"
+                                class="
+                                  btn btn-primary-color btn-social btn-google
+                                "
+                                id="form-1-search"
+                                ><i class="fa fa-google me-2"></i>Login with
+                                Google</a
+                              >
+                            </div>
+                          </form>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="profile"
+                          role="tabpanel"
+                          aria-labelledby="profile-tab"
+                        >
+                          <form class="row gy-2 gx-3 align-items-center form-2">
+                            <div class="col-sm-6">
+                              <label for="firstname" class="form-label"
+                                >First Name</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="firstName"
+                                placeholder="First Name..."
+                              />
+                            </div>
+                            <div class="col-sm-6">
+                              <label for="lastname" class="form-label"
+                                >Last Name</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                placeholder="Last Name..."
+                              />
+                            </div>
+                            <div class="col-sm-6">
+                              <label for="password" class="form-label"
+                                >Password</label
+                              >
+                              <input
+                                type="password"
+                                class="form-control"
+                                id="password"
+                                placeholder="8 characters, 1number, 1 symbol"
+                              />
+                            </div>
+                            <div class="col-sm-6">
+                              <label for="rePassword" class="form-label"
+                                >Re-enter Password</label
+                              >
+                              <input
+                                type="password"
+                                class="form-control"
+                                id="rePassword"
+                                placeholder=""
+                              />
+                            </div>
+                            <div class="col-sm-12">
+                              <label for="email" class="form-label"
+                                >Email</label
+                              >
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Email..."
+                              />
+                            </div>
+                            <div class="col-sm-12 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck1"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck1"
+                                >I agree to the Terms of Use/Privacy
+                                Policy</label
+                              >
+                            </div>
+                            <div class="col-sm-12">
+                              <button
+                                type="submit"
+                                class="btn btn-secondary-color btn-login"
+                                id="form-1-search"
+                              >
+                                Sign Up
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- Gallery Div -->
+    <div class="gallery-container">
+      <div class="container">
+        <div class="main-gallery">
+          <img src="images/gallery/1.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/2.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/3.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/4.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/5.jpg" class="slider-items" alt="" />
+        </div>
+        <div class="main-gallery-nav">
+          <img src="images/gallery/1.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/2.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/3.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/4.jpg" class="slider-items" alt="" />
+          <img src="images/gallery/5.jpg" class="slider-items" alt="" />
+        </div>
+      </div>
+    </div>
+
+        <!-- Name & Price Container -->
+
+
+    <!-- Description container -->
+    <div class="description-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8">
+            <div class="main-desc-cont">
+              <div class="container">
+                <div class="name-container">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-9">
+                      <div class="name-prop">
+                        <h2>Manhattan View</h2>
+                        <!-- <div>
+                          <i class="fa fa-map-pin" aria-hidden="true"></i><p>Lorem ipsum dolor sit amet consectetur </p>
+                        </div> -->
+                      </div>
+                      <div class="price-prop">
+                        <p> <span>$30,000</span></p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                      <div class="share-icons">
+                        <div class="row">
+                          <div class="col"><a href=""><i class="fa fa-share-alt-square" aria-hidden="true"></i></a></div>
+                          <div class="col"><a href=""><i class="fa fa-print" aria-hidden="true"></i></a></div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="equal-div">
+                <div class="row">
+                  <div class="col-sm-6 col-md-2 col-equal">
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <!-- <h4>Condo</h4> -->
+                    <p>Condo</p>
+                  </div>
+                  <div class="col-sm-6 col-md-2 col-equal">
+                    <i class="fa fa-plug" aria-hidden="true"></i>
+                    <!-- <h4>147 Units  63 Stories
+                    </h4> -->
+                    <p>147 Units</p>
+                  </div>
+                  <div class="col-sm-6 col-md-2 col-equal">
+                    <i class="fa fa-bed" aria-hidden="true"></i>
+                    <!-- <h4>Type</h4> -->
+                    <p>0-4 Bedrooms</p>
+                  </div>
+                  <div class="col-sm-6 col-md-2 col-equal">
+                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                    <!-- <h4>Type</h4> -->
+                    <p>2017</p>
+                  </div>
+                  <div class="col-sm-6 col-md-2 col-equal">
+                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                    <!-- <h4>Type</h4> -->
+                    <p>566-1266 SqFt</p>
+                  </div>
+                  <div class="col-sm-6 col-md-2 col-equal">
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                    <!-- <h4>Type</h4> -->
+                    <p>$2655 per SqFt</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Text Div -->
+              <div class="row">
+                <div class="desc-div">
+                  <h2>Description</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    gravida augue, nec habitasse penatibus nostra egestas
+                    ultrices himenaeos. Senectus ornare ullamcorper quis et
+                    lacus congue libero purus taciti suscipit volutpat a leo
+                    accumsan, sed facilisis parturient aliquet nec augue
+                    nascetur magnis quisque vehicula montes fusce tincidunt.
+                    Scelerisque neque quisque dignissim lacus venenatis, mattis
+                    dis volutpat. <br /><br />
+
+                    Quis dictumst morbi donec ligula suscipit vestibulum,
+                    tristique proin a porttitor phasellus lobortis placerat,
+                    dapibus sagittis condimentum fusce rutrum. Dui ac metus
+                    natoque ullamcorper leo dictumst libero iaculis fringilla,
+                    purus eget malesuada sapien quis lacus ante pretium non, eu
+                    dapibus vitae convallis dignissim penatibus taciti auctor.
+                    Sem sodales tincidunt quam fermentum ante potenti mi
+                    habitasse nec phasellus, pulvinar neque sed facilisis per
+                    augue sociis ut nascetur. <br /><br />
+
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    gravida augue, nec habitasse penatibus nostra egestas
+                    ultrices himenaeos. Senectus ornare ullamcorper quis et
+                    lacus congue libero purus taciti suscipit volutpat a leo
+                    accumsan, sed facilisis parturient aliquet nec augue
+                    nascetur magnis quisque vehicula montes fusce tincidunt.
+                    Scelerisque neque quisque dignissim lacus venenatis, mattis
+                    dis volutpat.
+                  </p>
+                </div>
+                <div class="features">
+                  <h2>Features</h2>
+                  <div class="icons">
+                    <div class="parking flex-icon">
+                      <i class="fa fa-product-hunt" aria-hidden="true"></i> <p>Free Parking</p>
+                    </div>
+                    <div class="parking flex-icon">
+                      <i class="fa fa-wifi" aria-hidden="true"></i> <p>Free Parking</p>
+                    </div>
+                    <div class="parking flex-icon">
+                      <i class="fa fa-coffee" aria-hidden="true"></i> <p>Free Parking</p>
+                    </div>
+                    <div class="parking flex-icon">
+                      <i class="fa fa-plane" aria-hidden="true"></i> <p>Free Parking</p>
+                    </div>
+                  </div>
+                  <div class="icons">
+                    <div class="parking flex-icon">
+                      <i class="fa fa-snowflake-o" aria-hidden="true"></i> <p>Free Parking</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Map -->
+                <div class="map">
+                  <h2>Property Location</h2>
+                  <div class="map-location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5762.274556744646!2d-79.58341481584507!3d43.77000911661772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1636129860899!5m2!1sen!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>
+
+                <!-- Floor Plans -->
+                <!-- <div class="floor">
+                  <h2>Floor Plans & Pricing</h2>
+                   <div class="plans">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Top Floor Plan</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ground Floor Plan</button>
+                      </li> -->
+                      <!-- <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                      </li> -->
+                    <!-- </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"> 
+
+
+                        <div class="row floor-gallery">
+                          <div class="col-sm-6 col-md-4">
+                            <a href="images/gallery/1.jpg">
+                              <img src="images/gallery/1.jpg" class="img-fluid" alt="">
+                            </a>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <a href="images/gallery/2.jpg">
+                              <img src="images/gallery/2.jpg" class="img-fluid" alt="">
+                            </a>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <a href="images/gallery/3.jpg">
+                              <img src="images/gallery/3.jpg" class="img-fluid" alt="">
+                            </a>
+                          </div>
+                        </div>
+
+
+                      </div>
+                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="row floor-gallery">
+                          <div class="col-sm-6 col-md-4">
+                            <a href="images/gallery/1.jpg">
+                              <img src="images/gallery/1.jpg" class="img-fluid" alt="">
+                            </a>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <a href="images/gallery/2.jpg">
+                              <img src="images/gallery/2.jpg" class="img-fluid" alt="">
+                            </a>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <a href="images/gallery/3.jpg">
+                              <img src="images/gallery/3.jpg" class="img-fluid" alt="">
+                            </a>
+                          </div>
+                        </div>
+                      </div> -->
+                      <!-- <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div> -->
+                    <!-- </div>
+                   </div>
+                </div> -->
+
+                <!-- Condos -->
+                <div class="condos">
+                  <h2>Floor Plans & Pricing</h2>
+                  <div class="condos-div">
+                    <nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="for-sale" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">For Sale</button>
+                        <button class="nav-link" id="sold" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Sold</button>
+
+                      </div>
+                    </nav>
+                    <h4>Condos</h4>
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="for-sale">
+                        <input type="text" class="form-control" id="myInput" placeholder="Search Condo here...">
+                        <ul class="list-group" id="myList">
+                          
+                          <li>
+                            <a href="">
+                              <div class="card">
+                                <div class="row g-0">
+                                  <div class="col-md-2">
+                                    <img src="images/featured-1.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      <h5 class="card-title"><span>1005 </span>Unit</h5>
+                                      <p class="card-text">$ 71995,000</p>
+                                      <div class="icons-set">
+                                        <div class="bed">
+                                          <i class="fa fa-bed" aria-hidden="true"> </i> <span>4 Bed</span>
+                                        </div>
+                                        <div class="shower">
+                                          <i class="fa fa-shower" aria-hidden="true"> </i> <span>4 Bed</span>
+                                        </div>
+                                        <div class="land">
+                                          <i class="fa fa-area-chart" aria-hidden="true"> </i> <span>4 Bed</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <span class="badge bg-primary rounded-pill">2 Bed</span>
+                          </li>
+                          <li >
+                           <a href="">
+                              <div class="card">
+                                <div class="row g-0">
+                                  <div class="col-md-2">
+                                    <img src="images/featured-1.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      <h5 class="card-title"><span>102 </span>Unit</h5>
+                                      <p class="card-text">$ 71995,000</p>
+                                      <div class="icons-set">
+                                        <div class="bed">
+                                          <i class="fa fa-bed" aria-hidden="true"> </i> <span>4 Bed</span>
+                                        </div>
+                                        <div class="shower">
+                                          <i class="fa fa-shower" aria-hidden="true"> </i> <span>4 Bed</span>
+                                        </div>
+                                        <div class="land">
+                                          <i class="fa fa-area-chart" aria-hidden="true"></i> <span>4 Bed</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <span class="badge bg-primary rounded-pill">3 Bed</span>
+                          </li>
+                          <li >
+                           <a href="">
+                              <div class="card">
+                                <div class="row g-0">
+                                  <div class="col-md-2">
+                                    <img src="images/featured-1.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      <h5 class="card-title"><span>100 </span>Unit</h5>
+                                      <p class="card-text">$ 71995,000</p>
+                                      <div class="icons-set">
+                                        <div class="bed">
+                                          <i class="fa fa-bed" aria-hidden="true"> </i><span> 4 Bed</span>
+                                        </div>
+                                        <div class="shower">
+                                          <i class="fa fa-shower" aria-hidden="true"> </i> <span>4 Bed</span>
+                                        </div>
+                                        <div class="land">
+                                          <i class="fa fa-area-chart" aria-hidden="true"></i> <span>4 Bed</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <span class="badge bg-primary rounded-pill">4+ Bed</span>
+                          </li>
+
+
+                        </ul>
+
+
+                      </div>
+
+
+                      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="sold">
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#">
+                              <div class="card">
+                                <div class="row g-0">
+                                  <div class="col-md-2">
+                                    <img src="images/featured-1.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      <h5 class="card-title"><span>1003 </span>Unit</h5>
+                                      <p class="card-text">$ 71995,000</p>
+                                      <div class="icons-set">
+                                        <div class="bed">
+                                          <i class="fa fa-bed" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                        <div class="shower">
+                                          <i class="fa fa-shower" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                        <div class="land">
+                                          <i class="fa fa-area-chart" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <span class="badge bg-primary rounded-pill">2 Bed</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#">
+                              <div class="card">
+                                <div class="row g-0">
+                                  <div class="col-md-2">
+                                    <img src="images/featured-1.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      <h5 class="card-title"><span>1003 </span>Unit</h5>
+                                      <p class="card-text">$ 71995,000</p>
+                                      <div class="icons-set">
+                                        <div class="bed">
+                                          <i class="fa fa-bed" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                        <div class="shower">
+                                          <i class="fa fa-shower" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                        <div class="land">
+                                          <i class="fa fa-area-chart" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <span class="badge bg-primary rounded-pill">3 Bed</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#">
+                              <div class="card">
+                                <div class="row g-0">
+                                  <div class="col-md-2">
+                                    <img src="images/featured-1.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      <h5 class="card-title"><span>1003 </span>Unit</h5>
+                                      <p class="card-text">$ 71995,000</p>
+                                      <div class="icons-set">
+                                        <div class="bed">
+                                          <i class="fa fa-bed" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                        <div class="shower">
+                                          <i class="fa fa-shower" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                        <div class="land">
+                                          <i class="fa fa-area-chart" aria-hidden="true"> 4 Bed</i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <span class="badge bg-primary rounded-pill">4+ Bed</span>
+                          </li>
+
+
+                        </ul>
+                      </div>
+
+                    </div>
+                  
+
+                  </div>
+                </div>
+
+                <!-- Video of Property -->
+                <div class="video">
+                  <h2>Video</h2>
+                  <div class="video-div">
+                    <iframe  src="https://www.youtube.com/embed/ueQNKmXVsO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="contact-div">
+              <div class="form-section">
+                <h3>Interested in Property?</h3>
+                <form action="">
+                  <div>
+                    <input type="email" class="form-control mb-3" placeholder="Full Name..." id="fullName">
+                  </div>
+                  <div>
+                    <input type="text" class="form-control mb-3" placeholder="Phone..." id="phone">
+                  </div>
+                  <div>
+                    <input type="email" class="form-control mb-3" placeholder="Email..." id="email">
+                  </div>
+                  <div>
+                    <textarea class="form-control mb-3" placeholder="Message..." id="exampleFormControlTextarea1" rows="6" ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary-color">Request Info</button>
+                </form>
+              </div>
+            </div>
+            <!-- Information-Div -->
+            <div class="information-new">
+              <h3>Get More Information</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit et suspendisse, felis dapibus egestas ridiculus vel at facilisi aptent, consequat sed varius phasellus odio ultrices dis lacinia.</p>
+              <div class="inform-icons">
+                <div class="num-div mb-2">
+                  <a href="tel:+92 345 4545456"><i class="fa fa-phone" aria-hidden="true">&nbsp;&nbsp;&nbsp;<span>+92 345 4545456</span></i></a>
+                </div>
+                <div class="email-div">
+                  <a href="mailto:needhome@email.com"><i class="fa fa-envelope" aria-hidden="true">&nbsp;&nbsp;&nbsp;<span>needhome@email.com</span></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Important Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h2>Discover</h2>
+            <ul class="list-unstyled">
+              <li><a href="#">Properties for sale</a></li>
+              <li><a href="#">Properties for rent</a></li>
+              <li><a href="#">Properties to buy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h2>Address</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit, nec
+              tristique cubilia class orci sociosqu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Address Bar -->
+    <div class="bottom-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-xs-12">
+            <p>All rights reserved &copy; needhome 2021</p>
+          </div>
+          <div class="col-sm-2 col-xs-12">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href=""
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <!-- <script src="js/jquery-ui.min.js"></script> -->
+  <!-- <script src="js/magnific-popup.js"></script> -->
+  <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
