@@ -166,6 +166,16 @@ $(document).ready(function(){
   });
 });
 
+// Listing Map View Search Filter
+$(document).ready(function(){
+  $("#map-input").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#map-ul li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
 
 
 // Listing Filter
