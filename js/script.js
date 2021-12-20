@@ -195,6 +195,8 @@ $(document).ready(function(){
 $(function(){
   $('#formSwitchCheckDefault').click(function(){
     $('.form-div .g-3').toggleClass('filter-form');
+    $('.selections').toggleClass('display-block')
+    $('.h4-sear').toggleClass('display-block')
     $('#cityName').toggleClass('filter-form');
     $('.form-div .btn-search').toggleClass('filter-form');
     $('.form-1 .col-sm-12').toggleClass('form-width');
@@ -853,7 +855,8 @@ $(function(){
 $(function(){
   $('.reset').click(function(){
     $('#cityList,#neighbourhood,#sale,#construction,#occupancy,#condoamenities,#product,#promotion,#walk,#transit').empty();
-    $('#pricerange,#price_too,#priceto,#psqft,#psqft_too,#psqftto,#bed,#bedto,#bed_too,#bath,#bath_too,#bathto,#sizesq,#sizesq_too,#sizesqto').empty();
+    $('#pricerange,#price_too,#priceto,#psqft,#psqft_too,#psqftto,#bed,#bedto,#bed_too,#bath,#bath_too,#bathto,#sizesq,#sizesq_too,#sizesqto,#deposit,#deposit_too,#depositto').empty();
+    
 
     // Listing Price
     $(function(){
@@ -900,6 +903,15 @@ $(function(){
         $('.sizesq-doll-1,.sizesq-doll-2').css('display', 'block');
       }
     })
+    //Listing Deposit
+    $(function(){
+      var emptydiv = $('#deposit').is(':empty');
+      if(emptydiv){
+        $('.deposit-doll-1,.deposit-doll-2').css('display', 'none');
+      }else{
+        $('.deposit-1,.deposit-doll-2').css('display', 'block');
+      }
+    })
     
     
   });
@@ -908,7 +920,7 @@ $(function(){
 $(function(){
   $('.reset').click(function(){
     $('#mapCityList,#map-neighbourhood,#map-sale,#map-construction,#map-occupancy,#map-condoamenities,#map-product,#map-promotion,#map-walk,#map-transit').empty();
-    $('#map-pricerange,#map-price_too,#map-priceto,#map-psqft,#map-psqft_too,#map-psqftto,#map-bed,#map-bedto,#map-bed_too,#map-bath,#map-bath_too,#map-bathto,#map-sizesq,#map-sizesq_too,#map-sizesqto').empty();
+    $('#map-pricerange,#map-price_too,#map-priceto,#map-psqft,#map-psqft_too,#map-psqftto,#map-bed,#map-bedto,#map-bed_too,#map-bath,#map-bath_too,#map-bathto,#map-sizesq,#map-sizesq_too,#map-sizesqto,#map-deposit,#map-deposit_too,#map-depositto').empty();
 
     // Listing Map Price 
     $(function(){
@@ -953,6 +965,15 @@ $(function(){
         $('.map-sizesq-doll-1,.map-sizesq-doll-2').css('display', 'none');
       }else{
         $('.map-sizesq-doll-1,.map-sizesq-doll-2').css('display', 'block');
+      }
+    })
+    //Listing Map Deposit
+    $(function(){
+      var emptydiv = $('#map-deposit').is(':empty');
+      if(emptydiv){
+        $('.map-deposit-doll-1,.map-deposit-doll-2').css('display', 'none');
+      }else{
+        $('.map-deposit-doll-1,.map-deposit-doll-2').css('display', 'block');
       }
     })
 
@@ -1202,3 +1223,44 @@ $(document).ready(function(){
         ]
   });
 });
+
+
+// let prices = document.querySelectorAll('.price');
+
+// let pricesCon = Array.from(prices);
+// pricesCon.reverse();
+// pricesCon[0].textContent;
+// console.log(pricesCon);
+
+// prices.forEach(function(price){
+//   let priceValue = price.textContent;
+//   console.log(priceValue);
+// })
+
+
+
+$(function(){
+  $('.columns-sel-selection').change(function(){
+    var val = $('.columns-sel-selection option').filter(':selected').text();
+    
+    
+  if(val === 'Two Column'){
+    var liFilter = $('.list-size');
+    liFilter.addClass('li-two-col');
+    liFilter.removeClass('li-three-col');
+    liFilter.removeClass('li-one-col');
+    }
+    else if(val === 'Three Column'){
+      var liFilter = $('.list-size');
+      liFilter.addClass('li-three-col');
+      liFilter.removeClass('li-two-col');
+      liFilter.removeClass('li-one-col');
+    }
+    else if(val === 'One Column'){
+      var liFilter = $('.list-size');
+      liFilter.addClass('li-one-col');
+      liFilter.removeClass('li-three-col');
+      liFilter.removeClass('li-two-col');
+    }
+  })
+})
