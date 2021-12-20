@@ -208,10 +208,10 @@
           <h1>Find Your New <br> <span>Construction</span> Home</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <div class="form-div py-3 px-2">
-            <form class="row gy-2 gx-3 align-items-center form-1">
+      <div class="row input-div">
+       <div class="col-sm-10">
+          <div class="form-div "> 
+            <!-- <form class="row gy-2 gx-3 align-items-center form-1">
               <div class="col-10 col-md-10 col-lg-10 col-sm-12">
                 <input type="text" class="form-control" id="cityName" placeholder="City, Neighborhood etc...">
 
@@ -219,137 +219,147 @@
               <div class="col-2 col-md-2 col-lg-2 col-sm-12">
                 <button type="submit" class="btn btn-primary-color btn-search" id="form-1-search">Search</button>
               </div>
-            </form>
+            </form> -->
             <form class="row g-3 px-2 filter-form" id="filter-form">
-              <h4 class="text-center">Search Filters</h4>
-              <div class="col-12">
-                <input type="text" class="form-control" id="cityNameSame" placeholder="City, Neighborhood etc...">
+              <div class="row">
+                <div class="col-10">
+                  <input type="text" class="form-control" id="cityNameSame" placeholder="City, Neighborhood etc...">
+                </div>
+                <div class="col-2">
+                  <button type="submit" class="btn btn-primary-color text-uppercase">Search</button>
+                </div>
               </div>
-              <div class="col-md-3 filt-col">
-                <label for="propertyType" class="form-label">City</label>
-                <div>
-                  <select id="city" class="form-select" required>
-                    <option selected>Select</option>
+              <div class="row selections">
+                <h4 class="text-center">Search Filters</h4>
+                <div class="row selection-cont">
+                  <div class="col-md-3 filt-col">
+                    <label for="propertyType" class="form-label">City</label>
+                    <div>
+                      <select id="city" class="form-select" required>
+                        <option selected>Select</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="neighbourhood-form" class="form-label">Neighbourhood</label>
+                    <select id="neighbourhood-form" class="form-select">
+                      <option selected>Select</option>
+                      
+                    </select>
+                  </div>
+                  <div class="col-3 filt-col">
+                    <label for="minPrice" class="form-label">Min Price</label>
+                    <!-- <input type="text" class="form-control" id="min-price" placeholder="Enter Minimum Amount.."> -->
                     
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="neighbourhood-form" class="form-label">Neighbourhood</label>
-                <select id="neighbourhood-form" class="form-select">
-                  <option selected>Select</option>
-                  
-                </select>
-              </div>
-              <div class="col-3 filt-col">
-                <label for="minPrice" class="form-label">Min Price</label>
-                <!-- <input type="text" class="form-control" id="min-price" placeholder="Enter Minimum Amount.."> -->
-                
-                  <select id="min-price" class="form-select">
-                    <option value="" selected hidden>Select</option>
-                    <option></option>
-                  </select>
-                
-              </div>
-              <div class="col-3 filt-col">
-                <label for="maxnPrice" class="form-label">Max Price</label>
-                <!-- <input type="text" class="form-control" id="max-price" placeholder="Enter Maximum Amount.."> -->
-                <div>
-                  <select id="max-price" class="form-select">
-                    <option value="" selected hidden>Select</option>
-                    <option></option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="beds" class="form-label">Beds</label>
-                <div>
-                  <select id="beds" class="form-select">
-                    <option selected>Select</option>
+                      <select id="min-price" class="form-select">
+                        <option value="" selected hidden>Select</option>
+                        <option></option>
+                      </select>
                     
-                  </select>
+                  </div>
+                  <div class="col-3 filt-col">
+                    <label for="maxnPrice" class="form-label">Max Price</label>
+                    <!-- <input type="text" class="form-control" id="max-price" placeholder="Enter Maximum Amount.."> -->
+                    <div>
+                      <select id="max-price" class="form-select">
+                        <option value="" selected hidden>Select</option>
+                        <option></option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="beds" class="form-label">Beds</label>
+                    <div>
+                      <select id="beds" class="form-select">
+                        <option selected>Select</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="baths" class="form-label">Baths</label>
+                    <div>
+                      <select id="baths" class="form-select">
+                        <option selected>Any</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="landSize" class="form-label">Land Size</label>
+                    <div>
+                      <select id="landSize" class="form-select">
+                        <option selected>Any</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="vipsales" class="form-label">Sales Status</label>
+                    <div>
+                      <select id="vipsales" class="form-select">
+                        <option selected>Any</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="const-status" class="form-label">Construction Status</label>
+                    <select id="const-status" class="form-select">
+                      <option selected>Any</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="occupancy-form" class="form-label">Occupancy Date</label>
+                    <select id="occupancy-form" class="form-select">
+                      <option selected>Immediate</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="condo" class="form-label">Condo Amenities</label>
+                    <select id="condo" class="form-select">
+                      <option selected>Select</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="landSize" class="form-label">Product Type</label>
+                    <select id="prod-type" class="form-select">
+                      <option selected>Any</option>
+                    </select>
+                  </div>
+    
+                  <div class="col-md-3 filt-col">
+                    <label for="buildingTypes" class="form-label">Building Type</label>
+                    <select id="buildingTypes" class="form-select">
+                      <option selected>Any</option>
+                      <option>House</option>
+                      <option>Row / Townhouse</option>
+                      <option>Apartment</option>
+                      <option>Duplex</option>
+                      <option>Triplex</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 form-check-dov">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Open Houses Only
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 filt-col">
+                    <label for="keywords" class="form-label">Keywords</label>
+                    <select id="keywords" class="form-select">
+                      <option selected>...</option>
+                    </select>
+                  </div>
+    
+                  <div class="col-12 btn-div">
+                    <button type="reset" id="homeReset" class="btn btn-secondary text-uppercase me-3">Reset</button>  
+                    <button type="submit" class="btn btn-primary-color text-uppercase">Search</button>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="baths" class="form-label">Baths</label>
-                <div>
-                  <select id="baths" class="form-select">
-                    <option selected>Any</option>
-                    
-                  </select>
                 </div>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="landSize" class="form-label">Land Size</label>
-                <div>
-                  <select id="landSize" class="form-select">
-                    <option selected>Any</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="vipsales" class="form-label">Sales Status</label>
-                <div>
-                  <select id="vipsales" class="form-select">
-                    <option selected>Any</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="const-status" class="form-label">Construction Status</label>
-                <select id="const-status" class="form-select">
-                  <option selected>Any</option>
-                </select>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="occupancy-form" class="form-label">Occupancy Date</label>
-                <select id="occupancy-form" class="form-select">
-                  <option selected>Immediate</option>
-                </select>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="condo" class="form-label">Condo Amenities</label>
-                <select id="condo" class="form-select">
-                  <option selected>Select</option>
-                </select>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="landSize" class="form-label">Product Type</label>
-                <select id="prod-type" class="form-select">
-                  <option selected>Any</option>
-                </select>
-              </div>
-
-              <div class="col-md-3 filt-col">
-                <label for="buildingTypes" class="form-label">Building Type</label>
-                <select id="buildingTypes" class="form-select">
-                  <option selected>Any</option>
-                  <option>House</option>
-                  <option>Row / Townhouse</option>
-                  <option>Apartment</option>
-                  <option>Duplex</option>
-                  <option>Triplex</option>
-                </select>
-              </div>
-              <div class="col-md-3 form-check-dov">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck">
-                  <label class="form-check-label" for="gridCheck">
-                    Open Houses Only
-                  </label>
-                </div>
-              </div>
-              <div class="col-md-3 filt-col">
-                <label for="keywords" class="form-label">Keywords</label>
-                <select id="keywords" class="form-select">
-                  <option selected>...</option>
-                </select>
-              </div>
-
-              <div class="col-12 btn-div">
-                <button type="reset" id="homeReset" class="btn btn-secondary text-uppercase me-3">Reset</button>  
-                <button type="submit" class="btn btn-primary-color text-uppercase">Search</button>
-              </div>
+              
             </form>
           </div>
 
