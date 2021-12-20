@@ -835,6 +835,7 @@
           <div class="row mb-3">
             <div class="result-div">
               <p>Showing <span>6</span> results of <span>12</span></p>
+              
               <nav aria-label="Page navigation example">
                 <ul class="pagination">
                   <li class="page-item">
@@ -853,11 +854,26 @@
                 </ul>
               </nav>
             </div>
+            <div class="row">
+              <div class="col-sm-2 sort-sel">
+                <select class="form-select col-m2" aria-label="Ascending">
+                  <option  value="Asc">ASC</option>
+                  <option value="Desc">DESC</option>
+                </select>
+              </div>
+              <div class="col-sm-3 offset-7 sort-sel columns-sel">
+                <select class="form-select col-m2 columns-sel-selection" aria-label="Columns">
+                  <option value="Two Col">Two Column</option>
+                  <option  value="One Col">One Column</option>
+                  <option value="Three Col">Three Column</option>
+                </select>
+              </div>
+            </div>
             <div class="listing-searchfil">
               <input type="text" placeholder="Search Property..." class="form-control listing-searchfilter" id="2-col-input">
             </div>
-            <ul class="d-flex" id="2-col-ul">
-              <li class="me-2">
+            <ul class="listing-search-col" id="2-col-ul">
+              <li class="me-2 list-size">
                 <div class="col-sm-12 mb-3">
                   <a href="#" class="link d-block">
                     <div class="card h-100">
@@ -865,7 +881,7 @@
                       <div class="card-body">
                         <span class="w-100 rent">Rent</span>
                         <h5 class="card-title">Manhattan View</h5>
-                        <div class="price">$8000</div>
+                        <div class="price">8000</div>
                         <div class="my-3 px-3 information d-flex justify-content-between">
                           <div><img src="images/bed.png" alt=""> 3</div>
                           <div><img src="images/shower.png" alt=""> 2</div>
@@ -881,7 +897,7 @@
                   </a>
                 </div>
               </li>
-              <li class="me-2">
+              <li class="me-2 list-size">
                 <div class="col-sm-12 mb-3">
                   <a href="#" class="link d-block">
                     <div class="card h-100">
@@ -889,7 +905,31 @@
                       <div class="card-body">
                         <span class="w-100 rent">Sold</span>
                         <h5 class="card-title">Ontario View</h5>
-                        <div class="price">$5050</div>
+                        <div class="price">5050</div>
+                        <div class="my-3 px-3 information d-flex justify-content-between">
+                          <div><img src="images/bed.png" alt=""> 3</div>
+                          <div><img src="images/shower.png" alt=""> 2</div>
+                          <div><img src="images/ruler.png" alt=""> 300sqft</div>
+                        </div>
+                      </div>
+        
+                      <div class="card-footer px-4">
+                        <small class="text-muted"><img src="images/pin-gray.png" class="pe-2" alt="Location">Lorem ipsum dolor
+                          sit amet consectetur </small>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="me-2 list-size">
+                <div class="col-sm-12 mb-3">
+                  <a href="#" class="link d-block">
+                    <div class="card h-100">
+                      <img src="images/featured.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <span class="w-100 rent">Sold</span>
+                        <h5 class="card-title">Ontario View</h5>
+                        <div class="price">5050</div>
                         <div class="my-3 px-3 information d-flex justify-content-between">
                           <div><img src="images/bed.png" alt=""> 3</div>
                           <div><img src="images/shower.png" alt=""> 2</div>
@@ -1427,7 +1467,7 @@
                        Deposit %
                       </button>
                       <div class="javascr">
-                        <p class="price-names" id="map-deposit"></p><span class="map-deposit-doll-1 dollar">% &nbsp;</span> <p id="map-deposit_too"></p><p id="map-depositto"></p><span class="map-deposit-doll-2 dollar">% ft</span>
+                        <p class="price-names" id="map-deposit"></p><span class="map-deposit-doll-1 dollar">% &nbsp;</span> <p id="map-deposit_too"></p><p id="map-depositto"></p><span class="map-deposit-doll-2 dollar">%</span>
                       </div>
                     </h2>
                     <div id="map-flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample-2">
