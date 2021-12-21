@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -739,6 +740,9 @@ nav .btn-secondary-color:hover {
 } */
 .hero-section .container .input-div .col-sm-10{
    margin-top: 20px; 
+}
+.width-custom{
+    width: 120%;
 }
 .display-none{
     display: none;
@@ -2123,6 +2127,83 @@ width: 48%;
 }
 
 
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #fafafa;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }
+
+  .preloader{
+      position: absolute;
+      width: 100%;
+      height: 103vh;
+      display: flex;
+      align-items: center;
+      z-index: 5555555555;
+      background-color: #344C74;
+  }
+  .stop-scrolling {
+    height: 100% !important;
+    overflow: hidden !important;
+    }
+
+
 
 /* Media Queries */
 @media(max-width:1400px) {
@@ -2330,6 +2411,9 @@ width: 48%;
 
 @media(max-width:768px) {
 
+    .width-custom {
+        width: 100%!important;
+    }
     .topbar a,
     .topbar .location p {
         font-size: 9px;
