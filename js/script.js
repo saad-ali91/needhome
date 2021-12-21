@@ -1,3 +1,14 @@
+function preloaderFadeOutInit(){
+  $('.preloader').fadeOut('slow');
+  $('body').attr('class','');
+  }
+  // Window load function
+  jQuery(window).on('load', function () {
+  (function ($) {
+  preloaderFadeOutInit();
+  })(jQuery);
+  });
+
 
 // $(function(){
 //     $('.filter-form').hide(0);
@@ -195,8 +206,10 @@ $(document).ready(function(){
 $(function(){
   $('#formSwitchCheckDefault').click(function(){
     $('.form-div .g-3').toggleClass('filter-form');
-    $('.selections').toggleClass('display-block')
-    $('.h4-sear').toggleClass('display-block')
+    $('.selections').toggleClass('display-block');
+    $('.h4-sear').toggleClass('display-block');
+    $('#filter-form .col-2 .btn').toggleClass('display-none');
+    $('#cityNameSame').toggleClass('width-custom');
     $('#cityName').toggleClass('filter-form');
     $('.form-div .btn-search').toggleClass('filter-form');
     $('.form-1 .col-sm-12').toggleClass('form-width');
