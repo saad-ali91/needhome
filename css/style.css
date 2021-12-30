@@ -898,7 +898,7 @@ nav .btn-secondary-color:hover {
 
 /* Listing Page */
 .toggle-btn-container{
-    padding: 30px 30px 10px 30px;
+    padding: 50px 30px 10px 30px;
     font-family: var(--paragraph-font);
     font-size: 19px;
     font-weight: 700;
@@ -919,16 +919,43 @@ nav .btn-secondary-color:hover {
 .listing{
     margin: 30px 0;
 }
+.overflow-y{
+    overflow-y: hidden;
+}
+.overflow-y-scroll{
+    overflow-y: scroll;
+}
+.listing .row:first-child{
+    justify-content: space-between;
+}
+.listing .container-fluid .map-cont {
+    position: relative;
+}
+.listing .container-fluid .map-cont .listing-search-filters{
+    position: absolute;
+    width: 23%;
+    top: -100px;
+}
+.listing iframe{
+    width: 100%;
+    min-height: 100%;
+}
+.map-iframe{
+    display: none;
+}
+.no-res{
+    display: none;
+}
 .listing .search-filter, .listing .search-result {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.16);
 }
 .listing .search-filter{
-    padding: 40px 30px;
+    padding: 20px 30px;
     font-family: var(--paragraph-font);
     max-height: 700px;
-    overflow: scroll;
+    /* overflow: scroll; */
     overflow-x: hidden;
 }
 .listing .search-filter h4{
@@ -977,6 +1004,10 @@ nav .btn-secondary-color:hover {
 .listing .accordion-body  {
     padding: 8px 5px;
     font-size: 13px;
+    max-height: 300px;
+}
+.listing .accordion-body:first-child{
+    overflow-y: scroll;
 }
 .listing .accordion-body .list-filter,.listing-map .accordion-body .list-filter {
     padding-left: 5px;
@@ -1097,14 +1128,14 @@ nav .btn-secondary-color:hover {
     margin-bottom: 15px;
    
 }
-.listing-map .filter-div{
+.filter-div{
     display: flex;
     justify-content: space-between;
 }
-.listing-map .form-div{
+.form-div{
     padding-bottom: 20px;
 }
-.listing-map .filter-div .fa{
+.filter-div .fa{
     font-size:25px;
     color: var(--primary-color);
     cursor: pointer;
@@ -1450,7 +1481,23 @@ nav .btn-secondary-color:hover {
     font-size: 14px;
 }
 
-
+.condo-img{
+    margin-top: 20px;
+}
+.update {
+    padding: 0px 30px 60px;
+}
+.update h5{
+    line-height: 1.7;
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.update p{
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--text-color);
+}
 .features p{
     line-height: 1.7;
     font-size: 15px;
@@ -1527,6 +1574,12 @@ nav .btn-secondary-color:hover {
     width: 100%;
     min-height: 400px;
 }
+.featured-dev h2{
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: 900;
+    padding-left: 40px;
+ }
 .contact-div{
     background-color: var(--light-color);
     border-radius: 15px;
@@ -2115,7 +2168,7 @@ nav .btn-secondary-color:hover {
     width: 48%!important;
 }
 .li-three-col{
-    width: 32%!important;
+    width: 31%!important;
 }
 .li-one-col{
     width: 98%!important;
@@ -2125,7 +2178,9 @@ nav .btn-secondary-color:hover {
 float: left;
 width: 48%;
 }
-
+.listing nav{
+    box-shadow: none;
+}
 
 .sk-cube-grid {
     width: 40px;
@@ -2250,6 +2305,28 @@ width: 48%;
     .signup p {
         font-size: 18px;
     }
+    .result-div{
+        flex-direction: column-reverse;
+    }
+    .search-result .sort-sel{
+        width: 50%;
+    }
+    .search-result .offset-5,.search-result .offset-7{
+        margin-left: 0;
+    }
+    .search-result .listing-search-col li{
+        width: 47%;
+    }
+    .listing .search-result .information{
+        /* flex-direction: column!important; */
+    }
+    .listing .search-result .information div{
+        margin-bottom: 10px;
+    }
+    .pagination{
+        justify-content: center;
+    }
+
 }
 
 @media(max-width:992px) {
@@ -2406,6 +2483,12 @@ width: 48%;
     .listing-map .list-map-cont .col-sm-12{
         top: 0;
     }
+    .toggle-btn-container .row .col-sm-12{
+        justify-content: space-evenly;
+    }
+    .listing .container-fluid .map-cont>.col-md-3{
+        width: 30%;
+    }
 
 }
 
@@ -2482,9 +2565,9 @@ width: 48%;
         position: relative;
         top: 0;
     }
-    .name-container .share-icons{
+    /* .name-container .share-icons{
         display: none;
-    }
+    } */
     .listing-map .list-card a{
         flex-direction: column!important;
     }
@@ -2495,9 +2578,57 @@ width: 48%;
         border-bottom: 1px solid rgba(201,201,201,0.48);;
     }
     #filter-form {
-        top: 115px;
+        top: 125px;
     }
-    
+    .toggle-btn-container .row .col-sm-12{
+        justify-content: center;
+    }
+    .toggle-btn-container .form-check{
+        margin-right: 15px;
+    }
+    .listing .columns{
+        flex-direction: column;
+    }
+    .listing .sort-sel {
+        width: 100%;
+    }
+    .listing .columns-sel{
+        display: none;
+    }
+    .search-result .listing-search-col li{
+        width: 100%;
+    }
+    #formListing .reset,#formListing .btn-primary-color{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .listing .search-filter{
+        padding: 20px 15px;
+    }
+    .name-container h2{
+        font-size: 25px;
+    }
+    .name-container .share-icons {
+        margin-top: 0;
+    }
+    .name-container .price-prop{
+        font-size: 20px;
+    }
+    .name-container .price-prop span{
+        font-size: 18px;
+    }
+    .first-list-div, .second-list-div{
+        width: 100%;
+    }
+    .table-cont{
+        flex-direction: column;
+    }
+    .description-container .main-desc-cont .col-equal{
+        width: 30%;
+    }
+    .description-container .main-desc-cont .col-equal{
+        border: 1px solid rgba(201,201,201,0.48)!important;
+    }
 }
 
 @media(max-width:576px) {
@@ -2572,6 +2703,19 @@ width: 48%;
     .listing-map .list-map-cont .col-sm-12{
         top: -20px;
     }
+    .listing .container-fluid .map-cont>.col-md-3{
+        width: 100%;
+        z-index: 55;
+        position: relative;
+        top: -20px;
+    }
+    .listing .row:first-child{
+        justify-content: center;
+    }
+    .map-iframe{
+        width: 100%;
+        min-height: 400px;
+    }
 }
 @media(max-width:414px) {
     .featured .fa-chevron-circle-right {
@@ -2594,6 +2738,9 @@ width: 48%;
         margin-bottom: 0;
     }
     .features .icons .flex-icon {
+        margin-bottom: 10px;
+    }
+    .description-container .container .row>.col-sm-12{
         margin-bottom: 10px;
     }
 }
