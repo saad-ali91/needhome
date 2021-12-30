@@ -1,3 +1,4 @@
+// Preloader
 function preloaderFadeOutInit(){
   $('.preloader').fadeOut('slow');
   $('body').attr('class','');
@@ -126,15 +127,58 @@ $(document).ready(function(){
   //   });
   //   });
 
-
+// Function for Listing Page Radio Buttons
 $(function(){
+  $('.listing .fa-filter').addClass('display-none');
   $('#flexRadioDefault1').click(function(){
-    $('.listing').slideDown(500);
-    $('.listing-map').hide(500);
+    // $('.listing').slideDown(500);
+    // $('.listing-map').hide(500);
+    if($('#flexRadioDefault1').is(':checked') ){
+      $(this).prop('disabled', true);
+      $('#flexRadioDefault2').prop('disabled', false);
+      var contRemoval = $('.listing .container-fluid');
+      var clsMd4 = $('.listing .row:first .col-md-3:first');
+      var clsMd8 = $('.listing .row:first .col-md-4:first');
+      $(contRemoval).removeClass('container-fluid').addClass('container');
+      $(clsMd4).removeClass('col-md-3').addClass('col-md-4');
+      $(clsMd8).removeClass('col-md-4').addClass('col-md-8');
+      $('.form-div').removeClass('display-none');
+      $('.search-filter').css('overflow-y', 'scroll');
+      $('.listing .fa-filter').addClass('display-none');
+      $('.map-iframe').css('display', 'none');
+    } 
+     
   })
   $('#flexRadioDefault2').click(function(){
-    $('.listing-map').show(500);
-    $('.listing').hide(500);
+    
+     if($(this).is(':checked')){
+      //  $('#flexRadioDefault2:checked');
+      $(this).prop('disabled', true);
+      $('#flexRadioDefault1').prop('disabled', false);
+      var contRemoval = $('.listing .container:first');
+      var clsMd4 = $('.listing .row:first .col-md-4:first');
+      var clsMd8 = $('.listing .row:first .col-md-8:first');
+      $(contRemoval).removeClass('container').addClass('container-fluid');
+      $(clsMd4).removeClass('col-md-4').addClass('col-md-3');
+      $(clsMd8).removeClass('col-md-8').addClass('col-md-4');
+      $('.form-div').addClass('display-none');
+      $('.search-filter').addClass('overflow-y');
+      $('.listing .fa-filter').removeClass('display-none');
+      $('.map-iframe').css('display', 'block');
+    // $('.listing-map').show(500);
+    // $('.listing').hide(500);
+      $('.columns div:first-child').removeClass('col-sm-2').addClass('col-sm-3');
+      $('.columns div:nth-child(2)').removeClass('col-sm-3 offset-7').addClass('col-sm-4 offset-5');
+     }
+  })
+})
+
+
+
+$(function(){
+  $('.listing .fa-filter').click(function(){
+    $('.form-div').toggleClass('display-none');
+    $('.search-filter').addClass('overflow-y-scroll').removeClass('overflow-y');
   })
 })
 
@@ -223,8 +267,22 @@ $(document).ready(function(){
   $(".city-input").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $(".list-filter li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      let searchResult = $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+     
+      console.log(searchResult);
+    // alert(searchResult.data);
+        // if(searchResult.count() <= 0){
+         
+        // }else {
+         
+        // }
+
+        
+      
+     
     });
+    console.log(value);
+    
   });
 });
 
@@ -233,15 +291,16 @@ $(document).ready(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='city']:checked").val();
+      var selValue = $("input:radio.cityRadio:checked").val();
       $('#cityList').text(selValue);
   })
 })
+
 // Listing City Map
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='mapCityList']:checked").val();
+      var selValue = $("input:radio.cityRadioMap:checked").val();
       $('#mapCityList').text(selValue);
   })
 })
@@ -250,7 +309,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='neighbourhood']:checked").val();
+      var selValue = $("input:radio.neighbourhoodRadio:checked").val();
       $('#neighbourhood').text(selValue);
   })
 })
@@ -258,7 +317,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='map-neighbourhood']:checked").val();
+      var selValue = $("input:radio.neighbourhoodRadioMap:checked").val();
       $('#map-neighbourhood').text(selValue);
   })
 })
@@ -268,7 +327,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='occupancy']:checked").val();
+      var selValue = $("input:radio.occupancyRadio:checked").val();
       $('#occupancy').text(selValue);
   })
 })
@@ -277,7 +336,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='map-occupancy']:checked").val();
+      var selValue = $("input:radio.occupancyRadioMap:checked").val();
       $('#map-occupancy').text(selValue);
   })
 })
@@ -303,7 +362,7 @@ $(function(){
 
 // Listing Price Range 
 $(function(){
-  $('#price-from').blur(function(){
+  $('#price-from').keyup(function(){
     var selValue = $("#price-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#pricerange').css('display', 'none');
@@ -319,7 +378,7 @@ $(function(){
 
   })
   
-  $('#price-to').blur(function(){
+  $('#price-to').keyup(function(){
     var selValue = $("#price-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#price_too').css('display','block');
@@ -338,7 +397,7 @@ $(function(){
 })
 // Listing Map Price Range 
 $(function(){
-  $('#map-price-from').blur(function(){
+  $('#map-price-from').keyup(function(){
     var selValue = $("#map-price-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-pricerange').css('display', 'none');
@@ -352,7 +411,7 @@ $(function(){
       $('#map-pricerange').text(selValue);
     }
   })
-  $('#map-price-to').blur(function(){
+  $('#map-price-to').keyup(function(){
     var selValue = $("#map-price-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-price_too').css('display','block');
@@ -373,7 +432,7 @@ $(function(){
 
 // Listing Price Sqft
 $(function(){
-  $('#p-sqft-from').blur(function(){
+  $('#p-sqft-from').keyup(function(){
     var selValue = $("#p-sqft-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#psqft').css('display', 'none');
@@ -387,7 +446,7 @@ $(function(){
       $('#psqft').text(selValue);
     }
   })
-  $('#p-sqft-to').blur(function(){
+  $('#p-sqft-to').keyup(function(){
     var selValue = $("#p-sqft-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#psqft_too').css('display','block');
@@ -406,7 +465,7 @@ $(function(){
 })
 // Listing Map Price Sqft
 $(function(){
-  $('#map-p-sqft-from').blur(function(){
+  $('#map-p-sqft-from').keyup(function(){
     var selValue = $("#map-p-sqft-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-psqft').css('display', 'none');
@@ -420,7 +479,7 @@ $(function(){
       $('#map-psqft').text(selValue);
     }
   })
-  $('#map-p-sqft-to').blur(function(){
+  $('#map-p-sqft-to').keyup(function(){
     var selValue = $("#map-p-sqft-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-psqft_too').css('display','block');
@@ -442,7 +501,7 @@ $(function(){
 
 // Listing Bed
 $(function(){
-  $('#bed-from').blur(function(){
+  $('#bed-from').keyup(function(){
     var selValue = $("#bed-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#bed').css('display', 'none');
@@ -456,7 +515,7 @@ $(function(){
       $('#bed').text(selValue);
     }
   })
-  $('#bed-to').blur(function(){
+  $('#bed-to').keyup(function(){
     var selValue = $("#bed-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#bed_too').css('display','block');
@@ -475,7 +534,7 @@ $(function(){
 })
 // Listing Map Bed
 $(function(){
-  $('#map-bed-from').blur(function(){
+  $('#map-bed-from').keyup(function(){
     var selValue = $("#map-bed-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-bed').css('display', 'none');
@@ -489,7 +548,7 @@ $(function(){
       $('#map-bed').text(selValue);
     }
   })
-  $('#map-bed-to').blur(function(){
+  $('#map-bed-to').keyup(function(){
     var selValue = $("#map-bed-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-bed_too').css('display','block');
@@ -512,7 +571,7 @@ $(function(){
 
 // Listing Bath
 $(function(){
-  $('#bath-from').blur(function(){
+  $('#bath-from').keyup(function(){
     var selValue = $("#bath-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#bath').css('display', 'none');
@@ -526,7 +585,7 @@ $(function(){
       $('#bath').text(selValue);
     }
   })
-  $('#bath-to').blur(function(){
+  $('#bath-to').keyup(function(){
     var selValue = $("#bath-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#bath_too').css('display','block');
@@ -545,7 +604,7 @@ $(function(){
 })
 // Listing Map Bath
 $(function(){
-  $('#map-bath-from').blur(function(){
+  $('#map-bath-from').keyup(function(){
     var selValue = $("#map-bath-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-bath').css('display', 'none');
@@ -559,7 +618,7 @@ $(function(){
       $('#map-bath').text(selValue);
     }
   })
-  $('#map-bath-to').blur(function(){
+  $('#map-bath-to').keyup(function(){
     var selValue = $("#map-bath-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-bath_too').css('display','block');
@@ -581,7 +640,7 @@ $(function(){
 
 // Listing Size sqft
 $(function(){
-  $('#sizesq-from').blur(function(){
+  $('#sizesq-from').keyup(function(){
     var selValue = $("#sizesq-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#sizesq').css('display', 'none');
@@ -595,7 +654,7 @@ $(function(){
       $('#sizesq').text(selValue);
     }
   })
-  $('#sizesq-to').blur(function(){
+  $('#sizesq-to').keyup(function(){
     var selValue = $("#sizesq-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#sizesq_too').css('display','block');
@@ -614,7 +673,7 @@ $(function(){
 })
 // Listing Map Size sqft
 $(function(){
-  $('#map-sizesq-from').blur(function(){
+  $('#map-sizesq-from').keyup(function(){
     var selValue = $("#map-sizesq-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-sizesq').css('display', 'none');
@@ -628,7 +687,7 @@ $(function(){
       $('#map-sizesq').text(selValue);
     }
   })
-  $('#map-sizesq-to').blur(function(){
+  $('#map-sizesq-to').keyup(function(){
     var selValue = $("#map-sizesq-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-sizesq_too').css('display','block');
@@ -649,7 +708,7 @@ $(function(){
 
 // Listing Deposit
 $(function(){
-  $('#deposit-from').blur(function(){
+  $('#deposit-from').keyup(function(){
     var selValue = $("#deposit-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#deposit').css('display', 'none');
@@ -663,7 +722,7 @@ $(function(){
       $('#deposit').text(selValue);
     }
   })
-  $('#deposit-to').blur(function(){
+  $('#deposit-to').keyup(function(){
     var selValue = $("#deposit-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#deposit_too').css('display','block');
@@ -682,7 +741,7 @@ $(function(){
 })
 // Map Listing Deposit
 $(function(){
-  $('#map-deposit-from').blur(function(){
+  $('#map-deposit-from').keyup(function(){
     var selValue = $("#map-deposit-from").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-deposit').css('display', 'none');
@@ -696,7 +755,7 @@ $(function(){
       $('#map-deposit').text(selValue);
     }
   })
-  $('#map-deposit-to').blur(function(){
+  $('#map-deposit-to').keyup(function(){
     var selValue = $("#map-deposit-to").val(); 
     if((selValue).length === '' || (selValue).length < 1){
       $('#map-deposit_too').css('display','block');
@@ -722,7 +781,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='promotion']:checked").val();
+      var selValue = $("input:radio.promotionRadio:checked").val();
       $('#promotion').text(selValue);
   })
 })
@@ -730,7 +789,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='map-promotion']:checked").val();
+      var selValue = $("input:radio.promotionRadioMap:checked").val();
       $('#map-promotion').text(selValue);
   })
 })
@@ -739,7 +798,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='walk']:checked").val();
+      var selValue = $("input:radio.walkRadio:checked").val();
       $('#walk').text(selValue);
   })
 })
@@ -747,7 +806,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='map-walk']:checked").val();
+      var selValue = $("input:radio.walkRadioMap:checked").val();
       $('#map-walk').text(selValue);
   })
 })
@@ -755,7 +814,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='transit']:checked").val();
+      var selValue = $("input:radio.transitRadio:checked").val();
       $('#transit').text(selValue);
   })
 })
@@ -763,7 +822,7 @@ $(function(){
 $(function(){
   $('.list-filter input').on('change',function(){
     $('.list-names').css("display" , "block");
-      var selValue = $("input[name='map-transit']:checked").val();
+      var selValue = $("input:radio.transitRadioMap:checked").val();
       $('#map-transit').text(selValue);
   })
 })
@@ -776,18 +835,18 @@ $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='sale']:checked"), function(){
+    $.each($("#salesCheck input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#sale').text(check.join(", "));
   })
 })
-// ListingMap Sales Status
+// Listing Map Sales Status
 $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='map-sale']:checked"), function(){
+    $.each($("#salesCheckMap input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#map-sale').text(check.join(", "));
@@ -799,7 +858,7 @@ $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='construction']:checked"), function(){
+    $.each($("#constructionCheck input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#construction').text(check.join(", "));
@@ -810,7 +869,7 @@ $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='map-construction']:checked"), function(){
+    $.each($("#constructionCheckMap input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#map-construction').text(check.join(", "));
@@ -822,7 +881,7 @@ $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='condoamenities']:checked"), function(){
+    $.each($("#condoCheck input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#condoamenities').text(check.join(", "));
@@ -833,7 +892,7 @@ $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='map-condoamenities']:checked"), function(){
+    $.each($("#condoCheckMap input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#map-condoamenities').text(check.join(", "));
@@ -845,7 +904,7 @@ $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='product']:checked"), function(){
+    $.each($("#productCheck input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#product').text(check.join(", "));
@@ -856,7 +915,7 @@ $(function(){
   $('.list-filter input').on('change', function(){
     $('.list-names').css("display" , "block");
     var check = [];
-    $.each($("input[name='map-product']:checked"), function(){
+    $.each($("#productCheckMap input[type=checkbox]:checked"), function(){
       check.push($(this).val()); 
     });
     $('#map-product').text(check.join(", "));
