@@ -219,7 +219,7 @@
     <div class="row">
       <div class="col-md-3 offset-md-9 col-sm-12">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
           <label class="form-check-label" for="flexRadioDefault1">
            List View
           </label>
@@ -238,10 +238,15 @@
 <!-- listing Div -->
 <div class="listing">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-12">
+    <div class="row map-cont">
+      <div class="col-md-4 col-sm-12 listing-search-filters">
         <div class="search-filter">
-          <h4>Filter By</h4>
+          <div class="filter-div">
+            <div><h4>Filter By</h4></div>
+            <div>
+              <i class="fa fa-filter"></i>
+            </div>
+          </div>
             <div class="form-div">
                <form action="" id="formListing">
                  <div>
@@ -268,24 +273,24 @@
                         <ul class="list-filter">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="city" id="exampleRadios1" value="Any">
-                              <label class="form-check-label" for="exampleRadios1" >
+                              <input class="form-check-input cityRadio" type="radio" name="cityRadio" value="Any">
+                              <label class="form-check-label" >
                                 Any
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="city" id="exampleRadios1" value="Torronto">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input cityRadio" type="radio" name="cityRadio" value="Torronto">
+                              <label class="form-check-label" >
                                 Torronto
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="city" id="exampleRadios1" value="Vaughan">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input cityRadio" type="radio" name="cityRadio" value="Vaughan">
+                              <label class="form-check-label" >
                                 Vaughan
                               </label>
                             </div>
@@ -309,24 +314,24 @@
                         <ul class="list-filter">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="neighbourhood" id="exampleRadios1" value="Any">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input neighbourhoodRadio" type="radio" name="neighbourhoodRadio" value="Any">
+                              <label class="form-check-label">
                                 Any
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="neighbourhood" id="exampleRadios1" value="401 Business Park">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input neighbourhoodRadio" type="radio" name="neighbourhoodRadio" value="401 Business Park">
+                              <label class="form-check-label" >
                                 401 Business Park
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="neighbourhood" id="exampleRadios1" value="Adjala-Tosorontio">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input neighbourhoodRadio" type="radio" name="neighbourhoodRadio"  value="Adjala-Tosorontio">
+                              <label class="form-check-label" >
                                 Adjala-Tosorontio
                               </label>
                             </div>
@@ -348,27 +353,27 @@
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         <input type="text" class="form-control city-input" placeholder="Enter Sales Status...">
-                        <ul class="list-filter">
+                        <ul class="list-filter" id="salesCheck">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="sale" id="exampleRadios1" value="Any">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input saleRadio" type="checkbox" value="Any">
+                              <label class="form-check-label" >
                                 Any
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="sale" id="exampleRadios1" value="VIP Sales">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input saleRadio" type="checkbox" value="VIP Sales">
+                              <label class="form-check-label" >
                                 VIP Sales
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="sale" id="exampleRadios1" value="Public Sales">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input saleRadio" type="checkbox" value="Public Sales">
+                              <label class="form-check-label" >
                                 Public Sales
                               </label>
                             </div>
@@ -389,35 +394,35 @@
                     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         <input type="text" class="form-control city-input" placeholder="Enter Construction Status...">
-                        <ul class="list-filter">
+                        <ul class="list-filter" id="constructionCheck">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="Any" name="construction" id="flexCheckDefault">
-                              <label class="form-check-label" for="flexCheckDefault">
+                              <input class="form-check-input" type="checkbox" value="Any" >
+                              <label class="form-check-label" >
                                 Any
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="Construction Complete" name="construction" id="flexCheckDefault">
-                              <label class="form-check-label" for="flexCheckDefault">
+                              <input class="form-check-input" type="checkbox" value="Construction Complete" >
+                              <label class="form-check-label" >
                                 Construction Complete
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="Pre-Construction" name="construction" id="flexCheckDefault">
-                              <label class="form-check-label" for="flexCheckDefault">
+                              <input class="form-check-input" type="checkbox" value="Pre-Construction" >
+                              <label class="form-check-label" >
                                 Pre-Construction
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="Pre-Construction" name="construction" id="flexCheckDefault">
-                              <label class="form-check-label" for="flexCheckDefault">
+                              <input class="form-check-input" type="checkbox" value="Pre-Construction" >
+                              <label class="form-check-label" >
                                 Under Construction
                               </label>
                             </div>
@@ -441,24 +446,24 @@
                         <ul class="list-filter">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="occupancy" id="exampleRadios1" value="Immediate">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input occupancyRadio" type="radio" name="occupancyRadio" value="Immediate">
+                              <label class="form-check-label">
                                 Immediate
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="occupancy" id="exampleRadios1" value="30 Days">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input occupancyRadio" type="radio" name="occupancyRadio" value="30 Days">
+                              <label class="form-check-label">
                                 30 Days
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="occupancy" id="exampleRadios1" value="90 Days">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input occupancyRadio" type="radio" name="occupancyRadio" value="90 Days">
+                              <label class="form-check-label">
                                 90 Days
                               </label>
                             </div>
@@ -479,27 +484,27 @@
                     <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         <input type="text" class="form-control city-input" placeholder="Enter Condo Amenities...">
-                        <ul class="list-filter">
+                        <ul class="list-filter" id="condoCheck">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="condoamenities" id="exampleRadios1" value="Fitness">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input" type="checkbox" value="Fitness">
+                              <label class="form-check-label" >
                                 Fitness
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="condoamenities" id="exampleRadios1" value="Party Room">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input" type="checkbox" value="Party Room">
+                              <label class="form-check-label" >
                                 Party Room
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="condoamenities" id="exampleRadios1" value="Terrace">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input" type="checkbox" value="Terrace">
+                              <label class="form-check-label" >
                                 Terrace
                               </label>
                             </div>
@@ -520,27 +525,27 @@
                     <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         <input type="text" class="form-control city-input" placeholder="Enter Product Type...">
-                        <ul class="list-filter">
+                        <ul class="list-filter" id="productCheck">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="product" id="exampleRadios1" value="Condo">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input" type="checkbox" value="Condo">
+                              <label class="form-check-label" >
                                 Condo
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="product" id="exampleRadios1" value="Condo Townhome">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input" type="checkbox" value="Condo Townhome">
+                              <label class="form-check-label">
                                 Condo Townhome
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="product" id="exampleRadios1" value="Loft">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input" type="checkbox" value="Loft">
+                              <label class="form-check-label">
                                 Loft
                               </label>
                             </div>
@@ -704,16 +709,16 @@
                         <ul class="list-filter">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="promotion" id="exampleRadios1" value="Yes">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input promotionRadio" type="radio" name="promotionRadio"  value="Yes">
+                              <label class="form-check-label">
                                Yes
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="promotion" id="exampleRadios1" value="No">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input promotionRadio" type="radio" name="promotionRadio" value="No">
+                              <label class="form-check-label">
                                 No
                               </label>
                             </div>
@@ -768,24 +773,24 @@
                         <ul class="list-filter">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="walk" id="exampleRadios1" value=" Walker’s Paradise (90-100)">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input walkRadio" type="radio" name="walkRadio" value=" Walker’s Paradise (90-100)">
+                              <label class="form-check-label">
                                 Walker’s Paradise (90-100)
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="walk" id="exampleRadios1" value="Very Walkable (70-89)">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input walkRadio" type="radio" name="walkRadio" value="Very Walkable (70-89)">
+                              <label class="form-check-label">
                                 Very Walkable (70-89)
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="walk" id="exampleRadios1" value="Somewhat Walkable (50-69)">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input walkRadio" type="radio" name="walkRadio" value="Somewhat Walkable (50-69)">
+                              <label class="form-check-label">
                                 Somewhat Walkable (50-69)
                               </label>
                             </div>
@@ -809,24 +814,24 @@
                         <ul class="list-filter">
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="transit" id="exampleRadios1" value="Rider’s Paradise (90-100)">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input transitRadio" type="radio" name="transitRadio" value="Rider’s Paradise (90-100)">
+                              <label class="form-check-label">
                                 Rider’s Paradise (90-100)
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="transit" id="exampleRadios1" value="Excellent Transit (70-89)">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input transitRadio" type="radio" name="transitRadio" value="Excellent Transit (70-89)">
+                              <label class="form-check-label" >
                                 Excellent Transit (70-89)
                               </label>
                             </div>
                           </li>
                           <li>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="transit" id="exampleRadios1" value="Good Transit (50-69)">
-                              <label class="form-check-label" for="exampleRadios1">
+                              <input class="form-check-input transitRadio" type="radio" name="transitRadio" value="Good Transit (50-69)">
+                              <label class="form-check-label">
                                 Good Transit (50-69)
                               </label>
                             </div>
@@ -844,7 +849,10 @@
             </div>
         </div>
       </div>
-      <div class="col-md-8 col-sm-12">
+      <div class="col-sm-8 map-iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8645.267711451464!2d-79.42396375502749!3d43.689514896376224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1636556494174!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="col-md-8 col-sm-12 search-listing">
         <div class="search-result">
           <div class="row mb-3">
             <div class="result-div">
@@ -868,7 +876,7 @@
                 </ul>
               </nav>
             </div>
-            <div class="row">
+            <div class="row columns">
               <div class="col-sm-2 sort-sel">
                 <select class="form-select col-m2" aria-label="Ascending">
                   <option  value="Asc">ASC</option>
@@ -992,667 +1000,7 @@
 
 
 <!-- NEw Listing Div With Maps-->
-<div class="listing-map">
-  <div class="container-fluid">
-    <div class="row list-map-cont">
-      <div class="col-md-2 col-sm-12 scroll-class">
-        <div class="search-filter">
-          <div class="filter-div">
-            <div><h4 >Filter By</h4> </div>
-            <div><i class="fa fa-filter" aria-hidden="true"></i></div>
-          </div>
-            <div class="form-div">
-               <form action="">
-                 <div>
-                  <input type="text" class="form-control" placeholder="Search...">
-                 </div>
-                 <div class="my-2 btn-group">
-                  <input type="reset" value="Reset" class="btn btn-secondary reset text-light">
-                  <input type="button" value="Search" class="btn btn-primary-color text-light">
-                </div>
-                 <div class="accordion accordion-flush" id="accordionFlushExample-2">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseOne" aria-expanded="false" aria-controls="map-flush-collapseOne">
-                        City
-                      </button>
-                      <p class="form-control list-names" id="mapCityList"></p>
-                      <!-- City shown after Selected -->
-                      
-                    </h2>
-                    <div id="map-flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter City ...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="mapCityList"  value="Any" >
-                              <label class="form-check-label" >
-                                Any
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="mapCityList"  value="Torronto">
-                              <label class="form-check-label" >
-                                Torronto
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="mapCityList"  value="Vaughan">
-                              <label class="form-check-label" >
-                                Vaughan
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseTwo" aria-expanded="false" aria-controls="map-flush-collapseTwo">
-                        Neighbourhood
-                      </button>
-                      <p class="form-control list-names" id="map-neighbourhood"></p>
-                      <!-- Neighbourhood shown after Selected -->
-                     
-                    </h2>
-                    <div id="map-flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter Neighbourhood...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-neighbourhood" id="exampleRadios1" value="Any">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Any
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-neighbourhood" id="exampleRadios1" value="401 Business Park">
-                              <label class="form-check-label" for="exampleRadios1">
-                                401 Business Park
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-neighbourhood" id="exampleRadios1" value="Adjala-Tosorontio">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Adjala-Tosorontio
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseThree" aria-expanded="false" aria-controls="map-flush-collapseThree">
-                        Sales Status
-                      </button>
-                      <p class="form-control list-names" id="map-sale"></p>
-                      <!--  Sales Status shown after Selected -->
-                      
-                    </h2>
-                    <div id="map-flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter Sales Status...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-sale" id="exampleRadios1" value="Any">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Any
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-sale" id="exampleRadios1" value="VIP Sales">
-                              <label class="form-check-label" for="exampleRadios1">
-                                VIP Sales
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-sale" id="exampleRadios1" value="Public Sales">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Public Sales
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFour">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFour" aria-expanded="false" aria-controls="map-flush-collapseFour">
-                        Construction Status
-                      </button>
-                      <p class="form-control list-names" id="map-construction"></p>
-                      <!--  Construction Status shown after Selected -->
-                      
-                    </h2>
-                    <div id="map-flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter Construction Status...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-construction" id="exampleRadios1" value="Any">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Any
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-construction" id="exampleRadios1" value="Construction Complete">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Construction Complete
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-construction" id="exampleRadios1" value="Pre-Construction">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Pre-Construction
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFive">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFive" aria-expanded="false" aria-controls="map-flush-collapseFive">
-                        Occupancy Date
-                      </button>
-                      <p class="form-control list-names" id="map-occupancy"></p>
-                      <!--  Occupancy Date shown after Selected -->
-                     
-                    </h2>
-                    <div id="map-flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter Occupancy Date...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-occupancy" id="exampleRadios1" value="Immediate">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Immediate
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-occupancy" id="exampleRadios1" value="30 Days">
-                              <label class="form-check-label" for="exampleRadios1">
-                                30 Days
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-occupancy" id="exampleRadios1" value="90 Days">
-                              <label class="form-check-label" for="exampleRadios1">
-                                90 Days
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingSix">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseSix" aria-expanded="false" aria-controls="map-flush-collapseSix">
-                        Condo Amenities
-                      </button>
-                      <p class="form-control list-names" id="map-condoamenities"></p>
-                      <!--   Condo Amenities shown after Selected -->
-                      
-                    </h2>
-                    <div id="map-flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter Condo Amenities...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-condoamenities" id="exampleRadios1" value="Fitness">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Fitness
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-condoamenities" id="exampleRadios1" value="Party Room">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Party Room
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-condoamenities" id="exampleRadios1" value="Terrace">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Terrace
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingSeven">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseSeven" aria-expanded="false" aria-controls="map-flush-collapseSeven">
-                        Product Type
-                      </button>
-                      <p class="form-control list-names" id="map-product"></p>
-                      <!--  Product Type shown after Selected -->
-                     
-                    </h2>
-                    <div id="map-flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter Product Type...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-product" id="exampleRadios1" value="Condo">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Condo
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-product" id="exampleRadios1" value="Condo Townhome">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Condo Townhome
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="map-product" id="exampleRadios1" value="Loft">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Loft
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Empty Div for height -->
-                  <div class="empty-div"></div>
-                  <!-- Empty Div for height -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingEight">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseEight" aria-expanded="false" aria-controls="map-flush-collapseEight">
-                        Price Range
-                        
-                      </button>
-                      <div class="javascr">
-                          <span class="map-price-doll-1 dollar">$</span><p class="map-price-names" id="map-pricerange"></p> <p id="map-price_too"></p><span class="map-price-doll-2 dollar">$</span><p id="map-priceto"></p>
-                        </div>
-                    </h2>
-                    <div id="map-flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <div>
-                          <label for="fromRange" class="form-label">
-                            From
-                          </label>
-                          <input type="text" id="map-price-from" class="form-control" placeholder="From...">
-                        </div>
-                        <div class="accordion-body">
-                          <div>
-                            <label for="toRange" class="form-label">
-                              To
-                            </label>
-                            <input type="text" id="map-price-to" class="form-control" placeholder="To...">
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseNine" aria-expanded="false" aria-controls="map-flush-collapseNine">
-                       Price /sq ft
-                      </button>
-                      <div class="javascr">
-                        <span class="map-psqft-doll-1 dollar">$</span><p class="price-names" id="map-psqft"></p> <p id="map-psqft_too"></p><span class="map-psqft-doll-2 dollar">$</span><p id="map-psqftto"></p>
-                      </div>
-                    </h2>
-                    <div id="map-flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <div>
-                          <label for="fromSqft" class="form-label">
-                            From
-                          </label>
-                          <input type="text" id="map-p-sqft-from" name="map-p-sqft-from" class="form-control" placeholder="From...">
-                        </div>
-                        <div class="accordion-body">
-                          <div>
-                            <label for="toSqft" class="form-label">
-                              To
-                            </label>
-                            <input type="text" id="map-p-sqft-to" name="map-p-sqft-to" class="form-control" placeholder="To...">
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseTen" aria-expanded="false" aria-controls="map-flush-collapseTen">
-                       Bedroom
-                      </button>
-                      <div class="javascr">
-                       <p class="price-names" id="map-bed"></p> <span class="map-bed-doll-1 dollar">bed&nbsp;</span> <p id="map-bed_too"></p><p id="map-bedto"></p><span class="map-bed-doll-2 dollar">beds</span>
-                      </div>
-                    </h2>
-                    <div id="map-flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <div>
-                          <label for="fromBed" class="form-label">
-                            From
-                          </label>
-                          <input type="text" id="map-bed-from" name="map-bed-from" class="form-control" placeholder="From...">
-                        </div>
-                        <div class="accordion-body">
-                          <div>
-                            <label for="toBed" class="form-label">
-                              To
-                            </label>
-                            <input type="text" id="map-bed-to" name="map-bed-to" class="form-control" placeholder="To...">
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingEleven">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseEleven" aria-expanded="false" aria-controls="map-flush-collapseEleven">
-                       Bathrooms
-                      </button>
-                      <div class="javascr">
-                        <p class="price-names" id="map-bath"></p><span class="map-bath-doll-1 dollar">bath &nbsp;</span> <p id="map-bath_too"></p><p id="map-bathto"></p><span class="map-bath-doll-2 dollar">baths</span>
-                      </div>
-                    </h2>
-                    <div id="map-flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <div>
-                          <label for="fromBath" class="form-label">
-                            From
-                          </label>
-                          <input type="text" id="map-bath-from" name="map-bath-from" class="form-control" placeholder="From...">
-                        </div>
-                        <div class="accordion-body">
-                          <div>
-                            <label for="toBath" class="form-label">
-                              To
-                            </label>
-                            <input type="text" id="map-bath-to" name="map-bath-to" class="form-control" placeholder="To...">
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwelve">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseTwelve" aria-expanded="false" aria-controls="map-flush-collapseTwelve">
-                       Size (sq ft)
-                      </button>
-                      <div class="javascr">
-                        <p class="price-names" id="map-sizesq"></p><span class="map-sizesq-doll-1 dollar">sq ft &nbsp;</span> <p id="map-sizesq_too"></p><p id="map-sizesqto"></p><span class="map-sizesq-doll-2 dollar">sq ft</span>
-                      </div>
-                    </h2>
-                    <div id="map-flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <div>
-                          <label for="fromSizesqft" class="form-label">
-                            From
-                          </label>
-                          <input type="text" id="map-sizesq-from" name="map-sizesq-from" class="form-control" placeholder="From...">
-                        </div>
-                        <div class="accordion-body">
-                          <div>
-                            <label for="toSizesqft" class="form-label">
-                              To
-                            </label>
-                            <input type="text" id="map-sizesq-to" name="map-sizesq-to" class="form-control" placeholder="To...">
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThirteen">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseThirteen" aria-expanded="false" aria-controls="map-flush-collapseThirteen">
-                        Promotion
-                      </button>
-                      <p class="form-control list-names" id="map-promotion"></p>
-                    </h2>
-                    <div id="map-flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-promotion" id="exampleRadios1" value="Yes">
-                              <label class="form-check-label" for="exampleRadios1">
-                               Yes
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-promotion" id="exampleRadios1" value="No">
-                              <label class="form-check-label" for="exampleRadios1">
-                                No
-                              </label>
-                            </div>
-                          </li>
-                      </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Empty Div for height -->
-                  <div class="empty-div"></div>
-                  <!-- Empty Div for height -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFourteen">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFourteen" aria-expanded="false" aria-controls="map-flush-collapseFourteen">
-                       Deposit %
-                      </button>
-                      <div class="javascr">
-                        <p class="price-names" id="map-deposit"></p><span class="map-deposit-doll-1 dollar">% &nbsp;</span> <p id="map-deposit_too"></p><p id="map-depositto"></p><span class="map-deposit-doll-2 dollar">%</span>
-                      </div>
-                    </h2>
-                    <div id="map-flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <div>
-                          <label for="map-deposit-from"  class="form-label">
-                            From
-                          </label>
-                          <input type="text" id="map-deposit-from" class="form-control" placeholder="From...">
-                        </div>
-                        <div class="accordion-body">
-                          <div>
-                            <label for="map-deposit-to" class="form-label">
-                              To
-                            </label>
-                            <input type="text" id="map-deposit-to" class="form-control" placeholder="To...">
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFifteen">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseFifteen" aria-expanded="false" aria-controls="map-flush-collapseFifteen">
-                        Walk Score
-                      </button>
-                      <p class="form-control list-names" id="map-walk"></p>
-                      <!-- Walk Score shown after Selected -->
-                      
-                    </h2>
-                    <div id="map-flush-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFifteen" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter Walk Score...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-walk" id="exampleRadios1" value="Walker’s Paradise (90-100)">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Walker’s Paradise (90-100)
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-walk" id="exampleRadios1" value="Very Walkable (70-89)">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Very Walkable (70-89)
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-walk" id="exampleRadios1" value="Somewhat Walkable (50-69)">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Somewhat Walkable (50-69)
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingSixteen">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#map-flush-collapseSixteen" aria-expanded="false" aria-controls="map-flush-collapseSixteen">
-                        Transit Score
-                      </button>
-                      <p class="form-control list-names" id="map-transit"></p>
-                      <!-- Transit Score shown after Selected -->
-                      
-                    </h2>
-                    <div id="map-flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen" data-bs-parent="#accordionFlushExample-2">
-                      <div class="accordion-body">
-                        <input type="text" class="form-control city-input" placeholder="Enter  Transit Score...">
-                        <ul class="list-filter">
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-transit" id="exampleRadios1" value="Rider’s Paradise (90-100)">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Rider’s Paradise (90-100)
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-transit" id="exampleRadios1" value="Excellent Transit (70-89)">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Excellent Transit (70-89)
-                              </label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="map-transit" id="exampleRadios1" value="Good Transit (50-69)">
-                              <label class="form-check-label" for="exampleRadios1">
-                                Good Transit (50-69)
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="my-2 btn-group">
-                  <input type="reset" value="Reset" class="btn btn-secondary reset text-light">
-                  <input type="button" value="Search" class="btn btn-primary-color text-light">
-                </div>
-               </form>
-            </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8645.267711451464!2d-79.42396375502749!3d43.689514896376224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1636556494174!5m2!1sen!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <div class="col-md-4 overflow-scroll">
-        <div class="row g-0 list-card">
-          <input type="text" class="form-control mb-2" placeholder="Enter Property..." id="map-input">
-          <ul class="list-group" id="map-ul">
-            <li>
-              <a href="">
-                <div class="col-md-4">
-                  <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Manhattan View</h5>
-                    <p class="card-text">$ 30,000</p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="col-md-4">
-                  <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">sasddanhattan View</h5>
-                    <p class="card-text">$ 30,000</p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="col-md-4">
-                  <img src="images/featured.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">asdanhattan View</h5>
-                    <p class="card-text">$ 30,000</p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
 
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
